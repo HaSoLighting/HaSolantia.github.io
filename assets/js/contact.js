@@ -50,7 +50,7 @@ $(document).ready(function(){
                     required: "no email, no message"
                 },
                 message: {
-                    required: "um...yea, you have to write something to send this form.",
+                    required: "um.yea, you have to write something to send this form.",
                     minlength: "thats all? really?"
                 }
             },

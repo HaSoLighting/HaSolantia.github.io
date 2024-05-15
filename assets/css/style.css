@@ -31,7 +31,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #777777;
-  background: url(../img/body-bg.png) no-repeat center; }
+  background: url(../assets/images/body-bg.png) no-repeat center; }
 
 h1,
 h2,
@@ -2172,7 +2172,7 @@ h6 {
   color: #000000; }
 
 .primary-checkbox input:checked + label {
-  background: url(../img/elements/primary-check.png) no-repeat center center/cover;
+  background: url(../assets/images/elements/primary-check.png) no-repeat center center/cover;
   border: none; }
 
 .confirm-checkbox {
@@ -2206,7 +2206,7 @@ h6 {
   border: 1px solid #f1f1f1; }
 
 .confirm-checkbox input:checked + label {
-  background: url(../img/elements/success-check.png) no-repeat center center/cover;
+  background: url(../assets/images/elements/success-check.png) no-repeat center center/cover;
   border: none; }
 
 .disabled-checkbox {
@@ -2244,7 +2244,7 @@ h6 {
   z-index: 3; }
 
 .disabled-checkbox input:checked + label {
-  background: url(../img/elements/disabled-check.png) no-repeat center center/cover;
+  background: url(../assets/images/elements/disabled-check.png) no-repeat center center/cover;
   border: none; }
 
 .primary-radio {
@@ -2278,7 +2278,7 @@ h6 {
   border: 1px solid #f1f1f1; }
 
 .primary-radio input:checked + label {
-  background: url(../img/elements/primary-radio.png) no-repeat center center/cover;
+  background: url(../assets/images/elements/primary-radio.png) no-repeat center center/cover;
   border: none; }
 
 .confirm-radio {
@@ -2312,7 +2312,7 @@ h6 {
   border: 1px solid #f1f1f1; }
 
 .confirm-radio input:checked + label {
-  background: url(../img/elements/success-radio.png) no-repeat center center/cover;
+  background: url(../assets/images/elements/success-radio.png) no-repeat center center/cover;
   border: none; }
 
 .disabled-radio {
@@ -2359,7 +2359,7 @@ h6 {
   padding: 0px; }
 
 .disabled-radio input:checked + label {
-  background: url(../img/elements/disabled-radio.png) no-repeat center center/cover;
+  background: url(../assets/images/elements/disabled-radio.png) no-repeat center center/cover;
   border: none; }
 
 .default-select {
@@ -2585,7 +2585,7 @@ h6 {
     position: absolute;
     top: -25px;
     left: -50px;
-    background: url(../img/client-info-bg.png) no-repeat;
+    background: url(../assets/images/client-info-bg.png) no-repeat;
     height: 175px;
     width: 175px; }
     @media (max-width: 575px) {
@@ -2823,7 +2823,7 @@ h6 {
   color: #ffffff; }
 
 .subscription_box {
-  background: url(../img/subscribe-bg.png) no-repeat center;
+  background: url(../assets/images/subscribe-bg.png) no-repeat center;
   padding: 150px 0px; }
   @media (max-width: 767px) {
     .subscription_box {
