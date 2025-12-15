@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Topics – HaSolantia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Educational topics in power quality and lighting design. Non-commercial website." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="page">
+  <header>
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="index.html" style="display:flex; align-items:center; gap:0.9rem;">
+          <div class="nav-logo-icon"><span>HS</span></div>
+          <div class="nav-brand">
+            <div class="nav-brand-title">HaSolantia</div>
+            <div class="nav-brand-sub">Power You Trust.</div>
+          </div>
+        </a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Topics</a>
+		<a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="section-tagline">Knowledge Areas</div>
+        <h1 class="section-title">Electrical & lighting design topics</h1>
+        <p class="section-intro">
+          This page organizes educational content and portfolio themes. It is not a commercial “services” page.
+          Everything here is informational and intended for learning, documentation, and future impact.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-icon">⚡</div>
+            <div class="card-title">Voltage Stability</div>
+            <p class="card-text">
+              What low voltage and high voltage do to appliances, motors, and power supplies — and how to interpret symptoms like flicker, overheating, and frequent failures.
+            </p>
+            <ul class="list">
+              <li>Brownouts vs. outages</li>
+              <li>Motor heating and compressor risk</li>
+              <li>Basic sizing concepts (informational)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🛡️</div>
+            <div class="card-title">Surges & Protection Concepts</div>
+            <p class="card-text">
+              Surges from lightning and switching events; protective device concepts (SPD types, placement logic, grounding pathways) explained simply.
+            </p>
+            <ul class="list">
+              <li>SPD Type 1/2/3 basics</li>
+              <li>Earthing and bonding role</li>
+              <li>Common misconceptions</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">〰️</div>
+            <div class="card-title">Harmonics</div>
+            <p class="card-text">
+              Why harmonics happen (non-linear loads), what they damage (transformers, neutral conductors, electronics), and how to think about mitigation at a concept level.
+            </p>
+            <ul class="list">
+              <li>Common sources: inverters, welders</li>
+              <li>Neutral overheating</li>
+              <li>Filtering concepts</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🌍</div>
+            <div class="card-title">Grounding & Safety</div>
+            <p class="card-text">
+              Practical grounding concepts (earth resistance, bonding, fault paths). Educational emphasis on safety and standards-based thinking.
+            </p>
+            <ul class="list">
+              <li>Why “earth” matters</li>
+              <li>Bonding vs grounding</li>
+              <li>Safety-first mindset</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">💡</div>
+            <div class="card-title">Lighting Design Fundamentals</div>
+            <p class="card-text">
+              Lighting layers, visual comfort, glare, distribution, and documentation. Includes academic/personal project examples.
+            </p>
+            <ul class="list">
+              <li>Ambient / task / accent strategy</li>
+              <li>Uniformity and perception</li>
+              <li>Design justification</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🧩</div>
+            <div class="card-title">Case Studies & Diagrams</div>
+            <p class="card-text">
+              Structured write-ups with diagrams and assumptions. All examples are academic/personal and are presented for learning.
+            </p>
+            <ul class="list">
+              <li>Single-line example diagrams</li>
+              <li>Protection architecture examples</li>
+              <li>Lighting layout examples</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="soft" />
+        <p class="disclaimer">
+          <strong>Notice:</strong> This is an educational/portfolio website. No services are offered or solicited through this site at this time.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-row">
+        <div>© <span id="year"></span> HaSolantia. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="disclaimer">
+        This website is for educational and portfolio purposes only. No services are offered or solicited through this site at this time.
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+  if (navToggle && navLinks) navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

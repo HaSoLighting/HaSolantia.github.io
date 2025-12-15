@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Not Available – HaSolantia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="page">
+  <header>
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="index.html" style="display:flex; align-items:center; gap:0.9rem;">
+          <div class="nav-logo-icon"><span>HS</span></div>
+          <div class="nav-brand">
+            <div class="nav-brand-title">HaSolantia</div>
+            <div class="nav-brand-sub">Power You Trust.</div>
+          </div>
+        </a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Topics</a>
+		<a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="section-tagline">Notice</div>
+        <h1 class="section-title">This page is not available</h1>
+        <p class="section-intro">
+          This website is for educational and portfolio purposes only.
+          No services are offered or solicited through this site at this time.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-icon">📚</div>
+            <div class="card-title">Go to Topics</div>
+            <p class="card-text">Explore educational areas in power quality and lighting design.</p>
+            <div style="margin-top:1rem;">
+              <button class="btn-primary" onclick="window.location.href='services.html'">Topics</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">👤</div>
+            <div class="card-title">About</div>
+            <p class="card-text">Read background context and see the portfolio framing.</p>
+            <div style="margin-top:1rem;">
+              <button class="btn-secondary" onclick="window.location.href='about.html'">About</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🏠</div>
+            <div class="card-title">Home</div>
+            <p class="card-text">Return to the main educational landing page.</p>
+            <div style="margin-top:1rem;">
+              <button class="btn-secondary" onclick="window.location.href='index.html'">Home</button>
+            </div>
+          </div>
+        </div>
+
+        <hr class="soft" />
+        <p class="disclaimer">
+          If you plan to commercialize later (e.g., after OPT/work authorization), this page can be converted back into a quote/lead page.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-row">
+        <div>© <span id="year"></span> HaSolantia. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="services.html">Topics</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="disclaimer">
+        This website is for educational and portfolio purposes only. No services are offered or solicited through this site at this time.
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+  if (navToggle && navLinks) navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

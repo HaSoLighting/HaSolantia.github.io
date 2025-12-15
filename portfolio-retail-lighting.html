@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Retail Lighting Layout (AGi32) – Portfolio | HaSolantia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio project: Retail Lighting Layout (AGi32). Academic/personal work. Non-commercial website." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="page">
+  <header>
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="index.html" style="display:flex; align-items:center; gap:0.9rem;">
+          <div class="nav-logo-icon"><span>HS</span></div>
+          <div class="nav-brand">
+            <div class="nav-brand-title">HaSolantia</div>
+            <div class="nav-brand-sub">Power You Trust.</div>
+          </div>
+        </a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Topics</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="section-tagline">Portfolio</div>
+        <h1 class="section-title">Retail Lighting Layout (AGi32)</h1>
+        <p class="section-intro">
+          Layered lighting strategy for a retail environment: ambient + accent + task, with emphasis on visual hierarchy and comfort.
+          <strong>Academic / Personal project</strong>.
+        </p>
+
+        <div class="card">
+          <div class="card-title">Project snapshot</div>
+          <ul class="list">
+            <li><strong>Tools:</strong> AGi32 (or DIALux), photometric files</li>
+            <li><strong>Outputs:</strong> layout, calculation grid, narrative</li>
+            <li><strong>Status:</strong> Academic / Personal</li>
+          </ul>
+
+          <hr class="soft" />
+
+          <div class="card-title" style="font-size:1rem;">Files</div>
+          <p class="card-text">
+            <a class="inline-link" href="assets/projects/retail-lighting/retail-lighting-report.pdf" target="_blank" rel="noopener">
+              Open PDF report
+            </a>
+          </p>
+          <p class="small-note">
+            Put your PDF at: <code>assets/projects/retail-lighting/retail-lighting-report.pdf</code>
+          </p>
+        </div>
+
+        <hr class="soft" />
+
+        <div class="section-tagline">Images</div>
+        <h2 class="section-title" style="font-size:1.35rem;">Gallery</h2>
+        <p class="section-intro">
+          Replace these images with your real exports (layouts, renderings, calculation screenshots).
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-title">Layout</div>
+            <img src="assets/projects/retail-lighting/img-01-layout.png" alt="Retail lighting layout" style="border-radius:12px; margin-top:0.7rem;" />
+            <p class="small-note" style="margin-top:0.6rem;">File: <code>img-01-layout.png</code></p>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Rendering</div>
+            <img src="assets/projects/retail-lighting/img-02-render.jpg" alt="Retail lighting rendering" style="border-radius:12px; margin-top:0.7rem;" />
+            <p class="small-note" style="margin-top:0.6rem;">File: <code>img-02-render.jpg</code></p>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Calculations</div>
+            <img src="assets/projects/retail-lighting/img-03-calc.png" alt="Retail lighting calculations" style="border-radius:12px; margin-top:0.7rem;" />
+            <p class="small-note" style="margin-top:0.6rem;">File: <code>img-03-calc.png</code></p>
+          </div>
+        </div>
+
+        <hr class="soft" />
+        <p class="disclaimer">
+          <strong>Notice:</strong> This website is for educational and portfolio purposes only. No services are offered or solicited through this site at this time.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-row">
+        <div>© <span id="year"></span> HaSolantia. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="portfolio.html">Portfolio</a>
+          <a href="services.html">Topics</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="disclaimer">
+        This website is for educational and portfolio purposes only. No services are offered or solicited through this site at this time.
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+  if (navToggle && navLinks) navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
