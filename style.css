@@ -377,3 +377,15 @@ a.inline-link:hover { opacity: 0.9; }
 
 .footer-links { display: flex; gap: 1.2rem; flex-wrap: wrap; }
 .footer-links a { color: var(--color-text-soft); }
+
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-link:hover .card {
+  transform: translateY(-4px);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
