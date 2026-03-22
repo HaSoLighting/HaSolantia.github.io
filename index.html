@@ -93,7 +93,6 @@
 
         <div class="grid-3">
 
-          <!-- Power Quality -->
           <a href="services.html#power-quality" class="card-link">
             <div class="card">
               <div class="card-icon">🔌</div>
@@ -111,7 +110,6 @@
             </div>
           </a>
 
-          <!-- Lighting Design -->
           <a href="services.html#lighting-design" class="card-link">
             <div class="card">
               <div class="card-icon">💡</div>
@@ -129,7 +127,6 @@
             </div>
           </a>
 
-          <!-- Portfolio -->
           <a href="portfolio.html" class="card-link">
             <div class="card">
               <div class="card-icon">📚</div>
@@ -185,154 +182,6 @@
     navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
   }
 
-  const yearSpan = document.getElementById("year");
-  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-</script>
-</body>
-</html>
-  <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <div>
-          <div class="hero-kicker">Portfolio & Educational Hub</div>
-
-          <h1 class="hero-title">
-            Power quality & lighting design<br/>
-            <span>knowledge and portfolio.</span>
-          </h1>
-
-          <p class="hero-subtitle">
-            This website shares educational content and project work focused on
-            electrical power quality (voltage stability, harmonics, grounding, surge risks),
-            and architectural lighting design. It is designed to build knowledge, awareness, and future impact.
-          </p>
-
-          <div class="hero-actions">
-            <button class="btn-primary" onclick="window.location.href='services.html'">
-              Explore Topics ⚡
-            </button>
-            <button class="btn-secondary" onclick="window.location.href='about.html'">
-              Portfolio & Background
-            </button>
-          </div>
-
-          <p class="small-note">
-            Non-commercial site — no services are offered or solicited here.
-          </p>
-        </div>
-
-        <aside class="hero-card" aria-label="What you will find here">
-          <div class="hero-card-title">What you'll find on this site</div>
-          <p>
-            Practical explanations, diagrams, and design examples — written to be clear,
-            technical, and useful for students, homeowners, and professionals.
-          </p>
-          <ul class="hero-card-list">
-            <li>Power-quality basics: sags, surges, harmonics, grounding.</li>
-            <li>System concepts: AVR, SPD types, filtering, load behavior.</li>
-            <li>Lighting design: layers of light, glare, metrics, workflows.</li>
-            <li>Portfolio case studies (academic/personal projects).</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-	<section>
-	<div class="container">
-	<div class="section-tagline">Start Here</div>
-	<h2 class="section-title">Suggested paths</h2>
-	<p class="section-intro">
-	  Choose a track depending on what you want to learn or review.
-	</p>
-
-	<div class="grid-3">
-
-	  <!-- Power Quality -->
-	  <a href="power-quality.html" class="card-link">
-		<div class="card">
-		  <div class="card-icon">🔌</div>
-		  <div class="card-title">Voltage Stability</div>
-		<p class="card-text">
-		  Start with a practical guide to undervoltage, overvoltage, brownouts,
-		  equipment symptoms, and why motors and compressors fail under poor supply conditions.
-		</p>
-		<ul class="list">
-		  <li>Brownouts vs. outages</li>
-		  <li>Motor heating and compressor risk</li>
-		  <li>Flicker, overheating, and repeated failures</li>
-		</ul>
-		</div>
-	  </a>
-
-	  <!-- Lighting Design -->
-	  <a href="lighting-design.html" class="card-link">
-		<div class="card">
-		  <div class="card-icon">💡</div>
-		  <div class="card-title">Lighting Design Practice</div>
-		  <p class="card-text">
-		    Portfolio-ready lighting design concepts and workflows — from layers of light
-		    to calculations and visual comfort considerations.
-		  </p>
-		  <ul class="list">
-		    <li>Ambient / task / accent strategy</li>
-		    <li>Glare, uniformity, and perception</li>
-		    <li>Tools and documentation</li>
-		  </ul>
-		</div>
-	  </a>
-
-	  <!-- Case Studies -->
-	  <a href="case-studies.html" class="card-link">
-		<div class="card">
-		  <div class="card-icon">📚</div>
-		  <div class="card-title">Case Studies & Examples</div>
-		  <p class="card-text">
-		    Structured project write-ups with objectives, assumptions, and diagrams.
-		    All examples are academic/personal work.
-		  </p>
-		  <ul class="list">
-		    <li>Single-line diagrams (example-only)</li>
-		    <li>Protection architecture concepts</li>
-		    <li>Lighting layouts and justification</li>
-		  </ul>
-		</div>
-	  </a>
-
-	</div>
-
-	<hr class="soft" />
-
-	<p class="disclaimer">
-	  <strong>Notice:</strong> This website is for educational and portfolio purposes only.
-	  No services are offered or solicited through this site at this time. HaSolantia is a future venture under development.
-	</p>
-	</div>
-	</section>
-
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-row">
-        <div>© <span id="year"></span> HaSolantia. All rights reserved.</div>
-        <div class="footer-links">
-          <a href="services.html">Topics</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
-
-      <div class="disclaimer">
-        This website is for educational and portfolio purposes only. No services are offered or solicited through this site at this time.
-      </div>
-    </div>
-  </footer>
-</div>
-
-<script>
-  const navToggle = document.getElementById("navToggle");
-  const navLinks = document.getElementById("navLinks");
-  if (navToggle && navLinks) navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
   const yearSpan = document.getElementById("year");
   if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 </script>
