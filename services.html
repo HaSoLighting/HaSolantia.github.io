@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Topics – HaSolantia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Educational topics in power quality and lighting design. Non-commercial website." />
+  <meta name="description" content="Explore HaSolantia topics in power quality and lighting design." />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -28,7 +28,7 @@
       <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="services.html" class="active">Topics</a>
-		<a href="portfolio.html">Portfolio</a>
+        <a href="portfolio.html">Portfolio</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
@@ -36,98 +36,238 @@
   </header>
 
   <main>
-    <section>
+    <section class="hero" style="padding-bottom: 3.2rem;">
       <div class="container">
-        <div class="section-tagline">Knowledge Areas</div>
-        <h1 class="section-title">Electrical & lighting design topics</h1>
+        <div class="hero-kicker">Topics</div>
+        <h1 class="hero-title">
+          Explore the two main tracks of HaSolantia:
+          <span>power quality and lighting design.</span>
+        </h1>
+        <p class="hero-subtitle" style="max-width: 760px;">
+          This page organizes the educational side of the website into two growing knowledge areas.
+          Each track combines practical explanations, foundational concepts, and article-style pages
+          that can expand over time.
+        </p>
+      </div>
+    </section>
+
+    <section id="power-quality" style="padding-top: 0;">
+      <div class="container">
+        <div class="section-tagline">Track 01</div>
+        <h2 class="section-title">Power Quality</h2>
         <p class="section-intro">
-          This page organizes educational content and portfolio themes. It is not a commercial “services” page.
-          Everything here is informational and intended for learning, documentation, and future impact.
+          Learn how electrical conditions affect equipment behavior, reliability, and safety.
+          This track focuses on practical field symptoms, basic design understanding, and core
+          concepts useful for students, homeowners, and early-career engineers.
+        </p>
+
+        <div class="grid-3">
+          <a href="power-quality.html" class="card-link">
+            <div class="card">
+              <div class="card-icon">⚡</div>
+              <div class="small-note" style="margin-bottom:0.3rem;">Article 01</div>
+              <div class="card-title">Voltage Stability</div>
+              <p class="card-text">
+                Understand undervoltage, overvoltage, brownouts, and the real-world symptoms
+                they cause in appliances, motors, and power supplies.
+              </p>
+              <ul class="list">
+                <li>Brownouts vs. outages</li>
+                <li>Motor heating and compressor risk</li>
+                <li>Frequent failure warning signs</li>
+              </ul>
+            </div>
+          </a>
+
+          <div class="card">
+            <div class="card-icon">🛡️</div>
+            <div class="small-note" style="margin-bottom:0.3rem;">Coming next</div>
+            <div class="card-title">Surges & Protection</div>
+            <p class="card-text">
+              A practical introduction to transient overvoltage, common surge pathways,
+              and the role of protective devices in reducing damage.
+            </p>
+            <ul class="list">
+              <li>What surges do to electronics</li>
+              <li>Basic SPD concepts</li>
+              <li>Protection limitations</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">📈</div>
+            <div class="small-note" style="margin-bottom:0.3rem;">Planned</div>
+            <div class="card-title">Harmonics & Load Behavior</div>
+            <p class="card-text">
+              Learn how non-linear loads affect waveform quality and why power electronics
+              can create overheating, nuisance trips, and poor performance.
+            </p>
+            <ul class="list">
+              <li>Sources of harmonics</li>
+              <li>Effects on equipment</li>
+              <li>Basic mitigation ideas</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid-3" style="margin-top: 1.4rem;">
+          <div class="card">
+            <div class="card-icon">🔧</div>
+            <div class="small-note" style="margin-bottom:0.3rem;">Planned</div>
+            <div class="card-title">Grounding & Neutral Issues</div>
+            <p class="card-text">
+              Explore grounding concepts, neutral problems, and why wiring conditions
+              can affect safety, equipment operation, and fault behavior.
+            </p>
+            <ul class="list">
+              <li>Neutral instability basics</li>
+              <li>Grounding misconceptions</li>
+              <li>Safety-oriented interpretation</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">📐</div>
+            <div class="small-note" style="margin-bottom:0.3rem;">Planned</div>
+            <div class="card-title">Voltage Drop & Basic Sizing</div>
+            <p class="card-text">
+              A simple design-oriented explanation of how conductor size, distance,
+              and load demand affect voltage at the point of use.
+            </p>
+            <ul class="list">
+              <li>Why long runs matter</li>
+              <li>Cable sizing intuition</li>
+              <li>Load and distance effects</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🧭</div>
+            <div class="small-note" style="margin-bottom:0.3rem;">Track overview</div>
+            <div class="card-title">What this series is about</div>
+            <p class="card-text">
+              This series explains power quality in a practical and readable way,
+              using real symptoms and equipment behavior as the starting point.
+            </p>
+            <ul class="list">
+              <li>Field symptoms first</li>
+              <li>Informational, not diagnostic</li>
+              <li>Built to grow over time</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lighting-design">
+      <div class="container">
+        <div class="section-tagline">Track 02</div>
+        <h2 class="section-title">Lighting Design</h2>
+        <p class="section-intro">
+          Explore lighting design through concepts, metrics, and project-based thinking.
+          This track is built to connect foundational design principles with academic and
+          portfolio-oriented applications.
         </p>
 
         <div class="grid-3">
           <div class="card">
-            <div class="card-icon">⚡</div>
-            <div class="card-title">Voltage Stability</div>
-            <p class="card-text">
-              What low voltage and high voltage do to appliances, motors, and power supplies — and how to interpret symptoms like flicker, overheating, and frequent failures.
-            </p>
-            <ul class="list">
-              <li>Brownouts vs. outages</li>
-              <li>Motor heating and compressor risk</li>
-              <li>Basic sizing concepts (informational)</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">🛡️</div>
-            <div class="card-title">Surges & Protection Concepts</div>
-            <p class="card-text">
-              Surges from lightning and switching events; protective device concepts (SPD types, placement logic, grounding pathways) explained simply.
-            </p>
-            <ul class="list">
-              <li>SPD Type 1/2/3 basics</li>
-              <li>Earthing and bonding role</li>
-              <li>Common misconceptions</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">〰️</div>
-            <div class="card-title">Harmonics</div>
-            <p class="card-text">
-              Why harmonics happen (non-linear loads), what they damage (transformers, neutral conductors, electronics), and how to think about mitigation at a concept level.
-            </p>
-            <ul class="list">
-              <li>Common sources: inverters, welders</li>
-              <li>Neutral overheating</li>
-              <li>Filtering concepts</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">🌍</div>
-            <div class="card-title">Grounding & Safety</div>
-            <p class="card-text">
-              Practical grounding concepts (earth resistance, bonding, fault paths). Educational emphasis on safety and standards-based thinking.
-            </p>
-            <ul class="list">
-              <li>Why “earth” matters</li>
-              <li>Bonding vs grounding</li>
-              <li>Safety-first mindset</li>
-            </ul>
-          </div>
-
-          <div class="card">
             <div class="card-icon">💡</div>
-            <div class="card-title">Lighting Design Fundamentals</div>
+            <div class="small-note" style="margin-bottom:0.3rem;">Suggested first article</div>
+            <div class="card-title">Layers of Light</div>
             <p class="card-text">
-              Lighting layers, visual comfort, glare, distribution, and documentation. Includes academic/personal project examples.
+              Learn the role of ambient, task, accent, and decorative lighting,
+              and how these layers work together to shape a space.
             </p>
             <ul class="list">
-              <li>Ambient / task / accent strategy</li>
-              <li>Uniformity and perception</li>
-              <li>Design justification</li>
+              <li>Ambient vs. task lighting</li>
+              <li>Accent and decorative roles</li>
+              <li>Design intent through layering</li>
             </ul>
           </div>
 
           <div class="card">
-            <div class="card-icon">🧩</div>
-            <div class="card-title">Case Studies & Diagrams</div>
+            <div class="card-icon">👁️</div>
+            <div class="small-note" style="margin-bottom:0.3rem;">Planned</div>
+            <div class="card-title">Glare & Visual Comfort</div>
             <p class="card-text">
-              Structured write-ups with diagrams and assumptions. All examples are academic/personal and are presented for learning.
+              Understand discomfort glare, brightness perception, and why visual comfort
+              is essential in both interior and exterior lighting design.
             </p>
             <ul class="list">
-              <li>Single-line example diagrams</li>
-              <li>Protection architecture examples</li>
-              <li>Lighting layout examples</li>
+              <li>Direct and reflected glare</li>
+              <li>Comfort and visibility</li>
+              <li>Design-oriented interpretation</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">📊</div>
+            <div class="small-note" style="margin-bottom:0.3rem;">Planned</div>
+            <div class="card-title">Lighting Metrics Explained</div>
+            <p class="card-text">
+              A practical guide to illuminance, luminance, uniformity, color rendering,
+              and other common metrics used in lighting design.
+            </p>
+            <ul class="list">
+              <li>What each metric means</li>
+              <li>How metrics relate to design goals</li>
+              <li>Common misunderstandings</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid-3" style="margin-top: 1.4rem;">
+          <div class="card">
+            <div class="card-icon">🛍️</div>
+            <div class="small-note" style="margin-bottom:0.3rem;">Case-based topic</div>
+            <div class="card-title">Retail Lighting Design</div>
+            <p class="card-text">
+              Explore how lighting shapes merchandise visibility, mood, spaciousness,
+              closure, and the customer experience in retail spaces.
+            </p>
+            <ul class="list">
+              <li>Display and ambient balance</li>
+              <li>Psychological reinforcement</li>
+              <li>Visual task considerations</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🅿️</div>
+            <div class="small-note" style="margin-bottom:0.3rem;">Case-based topic</div>
+            <div class="card-title">Outdoor Parking Lot Lighting</div>
+            <p class="card-text">
+              Learn how pole height, spacing, uniformity, and light trespass affect
+              sustainable outdoor lighting performance.
+            </p>
+            <ul class="list">
+              <li>Uniformity and spacing</li>
+              <li>Light pollution reduction</li>
+              <li>Energy and compliance basics</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🧾</div>
+            <div class="small-note" style="margin-bottom:0.3rem;">Track overview</div>
+            <div class="card-title">What this series is about</div>
+            <p class="card-text">
+              This series brings together design thinking, technical metrics,
+              and project examples to make lighting concepts more practical and understandable.
+            </p>
+            <ul class="list">
+              <li>Concepts + application</li>
+              <li>Readable and visual</li>
+              <li>Built for growth and portfolio use</li>
             </ul>
           </div>
         </div>
 
         <hr class="soft" />
+
         <p class="disclaimer">
-          <strong>Notice:</strong> This is an educational/portfolio website. No services are offered or solicited through this site at this time.
+          Topics on this page are educational and informational. Some are already published,
+          while others are planned as part of the ongoing development of the HaSolantia knowledge hub.
         </p>
       </div>
     </section>
@@ -139,10 +279,12 @@
         <div>© <span id="year"></span> HaSolantia. All rights reserved.</div>
         <div class="footer-links">
           <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
         </div>
       </div>
+
       <div class="disclaimer">
         This website is for educational and portfolio purposes only. No services are offered or solicited through this site at this time.
       </div>
@@ -153,7 +295,10 @@
 <script>
   const navToggle = document.getElementById("navToggle");
   const navLinks = document.getElementById("navLinks");
-  if (navToggle && navLinks) navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+  }
+
   const yearSpan = document.getElementById("year");
   if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 </script>
