@@ -28,13 +28,168 @@
       <div class="nav-links" id="navLinks">
         <a href="index.html" class="active">Home</a>
         <a href="services.html">Topics</a>
-		<a href="services.html">Portfolio</a>
+        <a href="portfolio.html">Portfolio</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
     </nav>
   </header>
 
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <div class="hero-kicker">Portfolio & Educational Hub</div>
+
+          <h1 class="hero-title">
+            Power quality & lighting design<br />
+            <span>knowledge and portfolio.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            This website shares educational content and project work focused on
+            electrical power quality and architectural lighting design. It is built
+            as a dual-track learning and portfolio platform for clear explanations,
+            practical insight, and future impact.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="window.location.href='services.html'">
+              Explore Topics ⚡
+            </button>
+            <button class="btn-secondary" onclick="window.location.href='portfolio.html'">
+              View Portfolio
+            </button>
+          </div>
+
+          <p class="small-note">
+            Non-commercial site — no services are offered or solicited here.
+          </p>
+        </div>
+
+        <aside class="hero-card" aria-label="What you will find here">
+          <div class="hero-card-title">What you'll find on this site</div>
+          <p>
+            Practical explanations, diagrams, and design examples — written to be clear,
+            technical, and useful for students, homeowners, and professionals.
+          </p>
+          <ul class="hero-card-list">
+            <li>Power quality: voltage stability, surges, harmonics, grounding.</li>
+            <li>Lighting design: layers of light, glare, metrics, workflows.</li>
+            <li>Case studies and portfolio-ready academic/personal work.</li>
+            <li>Structured topics designed to grow into a full knowledge hub.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-tagline">Start Here</div>
+        <h2 class="section-title">Suggested paths</h2>
+        <p class="section-intro">
+          Choose a track depending on what you want to learn, explore, or review.
+        </p>
+
+        <div class="grid-3">
+
+          <!-- Power Quality -->
+          <a href="services.html#power-quality" class="card-link">
+            <div class="card">
+              <div class="card-icon">🔌</div>
+              <div class="small-note" style="margin-bottom:0.3rem;">Track 01</div>
+              <div class="card-title">Power Quality</div>
+              <p class="card-text">
+                Explore practical electrical topics such as voltage stability,
+                surges, harmonics, grounding, and equipment behavior under weak or unstable supply conditions.
+              </p>
+              <ul class="list">
+                <li>Voltage stability and brownouts</li>
+                <li>Motor heating and equipment risk</li>
+                <li>Surge, harmonic, and grounding basics</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- Lighting Design -->
+          <a href="services.html#lighting-design" class="card-link">
+            <div class="card">
+              <div class="card-icon">💡</div>
+              <div class="small-note" style="margin-bottom:0.3rem;">Track 02</div>
+              <div class="card-title">Lighting Design</div>
+              <p class="card-text">
+                Learn lighting design principles, visual comfort concepts, and practical workflows
+                through educational articles and project-based examples.
+              </p>
+              <ul class="list">
+                <li>Layers of light and design intent</li>
+                <li>Glare, uniformity, and perception</li>
+                <li>Metrics, documentation, and case studies</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- Portfolio -->
+          <a href="portfolio.html" class="card-link">
+            <div class="card">
+              <div class="card-icon">📚</div>
+              <div class="small-note" style="margin-bottom:0.3rem;">Track 03</div>
+              <div class="card-title">Portfolio & Case Studies</div>
+              <p class="card-text">
+                Review structured project work with objectives, assumptions,
+                calculations, layouts, and design reasoning across power and lighting topics.
+              </p>
+              <ul class="list">
+                <li>Academic and personal project work</li>
+                <li>Technical diagrams and design documentation</li>
+                <li>Power and lighting examples in one place</li>
+              </ul>
+            </div>
+          </a>
+
+        </div>
+
+        <hr class="soft" />
+
+        <p class="disclaimer">
+          <strong>Notice:</strong> This website is for educational and portfolio purposes only.
+          No services are offered or solicited through this site at this time. HaSolantia is a future venture under development.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-row">
+        <div>© <span id="year"></span> HaSolantia. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="services.html">Topics</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        This website is for educational and portfolio purposes only. No services are offered or solicited through this site at this time.
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+  }
+
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
   <main>
     <section class="hero">
       <div class="container hero-inner">
