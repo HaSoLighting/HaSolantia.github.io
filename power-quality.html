@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Power Quality Essentials – HaSolantia</title>
+  <title>Voltage Stability – HaSolantia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn how low voltage and high voltage affect appliances, motors, and power supplies, and how to recognize symptoms like flicker, overheating, and frequent failures." />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -14,7 +15,7 @@
   <header>
     <nav class="nav">
       <div class="nav-left">
-        <a href="/" style="display:flex; align-items:center; gap:0.9rem;">
+        <a href="index.html" style="display:flex; align-items:center; gap:0.9rem;">
           <div class="nav-logo-icon"><span>HS</span></div>
           <div class="nav-brand">
             <div class="nav-brand-title">HaSolantia</div>
@@ -22,8 +23,9 @@
           </div>
         </a>
       </div>
+
       <div class="nav-links">
-        <a href="/">Home</a>
+        <a href="index.html">Home</a>
         <a href="services.html">Topics</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="about.html">About</a>
@@ -36,19 +38,175 @@
     <section>
       <div class="container">
         <div class="section-tagline">Power Quality</div>
-        <h1 class="section-title">Power Quality Essentials</h1>
+        <h1 class="section-title">Voltage Stability</h1>
 
-        <div class="card" style="max-width:640px;">
-          <p class="card-text">
-            Content for this section is currently under development.
-          </p>
-          <p class="card-text">
-            This page will cover voltage variation, surges, harmonics,
-            grounding concepts, and equipment protection in weak electrical grids.
-          </p>
-          <hr class="soft" />
+        <p class="section-intro" style="max-width: 850px;">
+          What low voltage and high voltage do to appliances, motors, and power supplies —
+          and how to interpret warning signs such as flicker, overheating, repeated tripping,
+          and frequent equipment failures.
+        </p>
+
+        <p class="small-note">Published March 2026 · First article in the Power Quality series</p>
+
+        <div class="card" style="max-width: 850px; margin-bottom: 1.5rem;">
           <p class="small-note">
-            🚧 <strong>Coming soon.</strong>
+            <strong>Reading focus:</strong> Brownouts vs. outages, motor heating, compressor risk,
+            and basic sizing concepts for understanding voltage-related problems.
+          </p>
+        </div>
+
+        <div class="card" style="max-width: 850px;">
+          <h2 class="card-title">Why voltage stability matters</h2>
+          <p class="card-text">
+            Most electrical equipment is designed to operate within a narrow voltage range.
+            When the supply voltage becomes too low or too high, equipment may still run,
+            but it no longer operates under healthy conditions. The result can be dim lighting,
+            unstable electronics, overheating motors, nuisance tripping, or premature failure.
+          </p>
+          <p class="card-text">
+            In many cases, damage is not caused by a complete loss of power, but by
+            prolonged operation under poor voltage conditions.
+          </p>
+
+          <hr class="soft" />
+
+          <h2 class="card-title">Low voltage: more dangerous than it looks</h2>
+          <p class="card-text">
+            Low voltage, often associated with a brownout, reduces the electrical pressure
+            available to equipment. Some devices simply perform poorly, but motors and
+            compressors are especially at risk because they may draw more current while
+            struggling to do the same work.
+          </p>
+
+          <h3 class="card-title" style="font-size:1.05rem;">Common symptoms of low voltage</h3>
+          <ul class="list">
+            <li>Lights dimming or flickering</li>
+            <li>Motors humming, starting slowly, or failing to start</li>
+            <li>Compressors overheating or cycling abnormally</li>
+            <li>Power supplies running hot or shutting down</li>
+            <li>Frequent breaker trips under load</li>
+          </ul>
+
+          <p class="card-text">
+            Low voltage is particularly harmful to motors because reduced voltage lowers
+            available torque. If the mechanical load remains the same, the motor may pull
+            more current and generate excessive heat. Over time, that extra heat degrades
+            insulation and shortens equipment life.
+          </p>
+
+          <hr class="soft" />
+
+          <h2 class="card-title">High voltage: faster damage, less warning</h2>
+          <p class="card-text">
+            High voltage can be just as serious. Lamps may burn brighter but fail sooner,
+            sensitive electronics may suffer internal stress, and insulation inside motors
+            and appliances may degrade more quickly than expected.
+          </p>
+
+          <h3 class="card-title" style="font-size:1.05rem;">Common symptoms of high voltage</h3>
+          <ul class="list">
+            <li>Bulbs failing too often</li>
+            <li>Unusually bright lighting before failure</li>
+            <li>Electronics failing unexpectedly</li>
+            <li>Power supplies overheating</li>
+            <li>Insulation stress and shortened equipment lifespan</li>
+          </ul>
+
+          <p class="card-text">
+            While undervoltage often causes prolonged thermal stress, overvoltage can
+            push components beyond their design limits and lead to sudden breakdown.
+          </p>
+
+          <hr class="soft" />
+
+          <h2 class="card-title">Brownouts vs. outages</h2>
+          <p class="card-text">
+            An <strong>outage</strong> means power is lost completely. A <strong>brownout</strong>
+            means voltage drops significantly, but not to zero. This difference is important:
+            during an outage, most equipment simply stops. During a brownout, equipment may
+            continue running in a stressed condition.
+          </p>
+
+          <p class="card-text">
+            That is why brownouts can sometimes be more damaging than outages,
+            especially for motors, refrigeration systems, air-conditioning compressors,
+            pumps, and older appliances.
+          </p>
+
+          <hr class="soft" />
+
+          <h2 class="card-title">Motor heating and compressor risk</h2>
+          <p class="card-text">
+            Motors rely on proper voltage to produce the torque needed to start and run.
+            When voltage drops too far:
+          </p>
+          <ul class="list">
+            <li>Starting torque decreases</li>
+            <li>Current may increase under load</li>
+            <li>Winding temperature rises</li>
+            <li>Insulation ages faster</li>
+            <li>Repeated failed starts can damage the motor permanently</li>
+          </ul>
+
+          <p class="card-text">
+            Compressors are especially vulnerable because they often require high starting
+            torque. If supply voltage is too low, the compressor may stall, overheat, or
+            repeatedly attempt to restart. This is one of the most common pathways to
+            premature compressor failure.
+          </p>
+
+          <hr class="soft" />
+
+          <h2 class="card-title">How to interpret common warning signs</h2>
+          <p class="card-text">
+            Electrical problems often reveal themselves through patterns. The symptoms below
+            do not always prove a voltage problem, but they are strong indicators worth investigating.
+          </p>
+
+          <ul class="list">
+            <li><strong>Flicker:</strong> often linked to voltage variation, loose connections, or unstable supply</li>
+            <li><strong>Overheating:</strong> common in motors, power supplies, cables, and terminals under abnormal conditions</li>
+            <li><strong>Frequent failures:</strong> repeated burnout of lamps or electronics can point to chronic overvoltage, surges, or poor regulation</li>
+            <li><strong>Slow motor startup:</strong> often suggests low voltage, voltage drop, or excessive starting load</li>
+            <li><strong>Breaker trips:</strong> may indicate overload, high starting current, or abnormal current caused by poor voltage conditions</li>
+          </ul>
+
+          <hr class="soft" />
+
+          <h2 class="card-title">Basic sizing concepts (informational)</h2>
+          <p class="card-text">
+            Many voltage problems do not begin at the appliance. They begin in system design.
+            Even without going deep into calculations, a few basic ideas help explain why some
+            installations perform well and others do not.
+          </p>
+
+          <ul class="list">
+            <li><strong>Cable size matters:</strong> undersized conductors increase voltage drop and heating</li>
+            <li><strong>Distance matters:</strong> long runs can lead to lower voltage at the equipment</li>
+            <li><strong>Starting current matters:</strong> motors can draw several times their rated current during startup</li>
+            <li><strong>Source capacity matters:</strong> transformers, generators, and inverters must be sized for both steady load and starting conditions</li>
+            <li><strong>Load diversity matters:</strong> multiple devices starting at the same time can pull voltage down</li>
+          </ul>
+
+          <p class="card-text">
+            The goal is not only to supply power, but to supply <em>stable</em> power at the
+            point where equipment actually operates.
+          </p>
+
+          <hr class="soft" />
+
+          <h2 class="card-title">Final takeaway</h2>
+          <p class="card-text">
+            Voltage instability is one of the most misunderstood causes of equipment damage.
+            Low voltage can quietly overheat motors and compressors. High voltage can shorten
+            the life of lamps, electronics, and insulation systems. Flicker, overheating,
+            nuisance tripping, and repeated failures are not random symptoms — they are often
+            early warnings of deeper electrical stress.
+          </p>
+
+          <p class="card-text">
+            Understanding these signs is the first step toward safer systems, longer equipment life,
+            and better electrical design decisions.
           </p>
         </div>
       </div>
