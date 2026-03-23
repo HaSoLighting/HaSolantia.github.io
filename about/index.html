@@ -14,7 +14,7 @@
   <header>
     <nav class="nav">
       <div class="nav-left">
-        <a href="index.html" style="display:flex; align-items:center; gap:0.9rem;">
+        <a href="/" style="display:flex; align-items:center; gap:0.9rem;">
           <div class="nav-logo-icon"><span>HS</span></div>
           <div class="nav-brand">
             <div class="nav-brand-title">HaSolantia</div>
@@ -27,10 +27,10 @@
 
       <div class="nav-links" id="navLinks">
         <a href="/">Home</a>
-		<a href="/services/">Topics</a>
-		<a href="/portfolio/">Portfolio</a>
-		<a href="/about/">About</a>
-		<a href="/contact/">Contact</a>
+        <a href="/services/">Topics</a>
+        <a href="/portfolio/">Portfolio</a>
+        <a href="/about/" class="active">About</a>
+        <a href="/contact/">Contact</a>
       </div>
     </nav>
   </header>
@@ -110,11 +110,13 @@
       <div class="footer-row">
         <div>© <span id="year"></span> HaSolantia. All rights reserved.</div>
         <div class="footer-links">
-          <a href="/services/">Topics</a>
           <a href="/">Home</a>
+          <a href="/services/">Topics</a>
+          <a href="/portfolio/">Portfolio</a>
           <a href="/contact/">Contact</a>
         </div>
       </div>
+
       <div class="disclaimer">
         This website is for educational and portfolio purposes only. No services are offered or solicited through this site at this time.
       </div>
@@ -125,7 +127,10 @@
 <script>
   const navToggle = document.getElementById("navToggle");
   const navLinks = document.getElementById("navLinks");
-  if (navToggle && navLinks) navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+  }
+
   const yearSpan = document.getElementById("year");
   if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 </script>
