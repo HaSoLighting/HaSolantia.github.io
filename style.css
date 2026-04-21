@@ -244,7 +244,7 @@ header {
 /* Cards / Grids */
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.4rem;
 }
 
@@ -274,6 +274,25 @@ header {
 
 .card-title { font-weight: 650; margin-bottom: 0.35rem; font-size: 1.02rem; }
 .card-text { font-size: 0.9rem; color: var(--color-text-soft); }
+
+.track-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.track-card p,
+.track-card ul {
+  flex-grow: 1;
+}
+
+.track-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
 .list {
   list-style: none;
