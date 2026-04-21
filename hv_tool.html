@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HV Cable Pre-Commissioning Tool</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f4f6f7;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 { text-align: center; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+}
+
+.status {
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.green { background: #2e8b57; }
+.red { background: #c0392b; }
+.orange { background: #ff8c00; }
+.gray { background: gray; }
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+pre {
+    background: black;
+    color: lime;
+    padding: 15px;
+    overflow-x: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>HV Cable Pre-Commissioning Tool</h1>
+
+<div class="card">
+<h2>Inputs</h2>
+
+<div class="grid">
+<label>Voltage (kV)<input id="voltage" value="34.5"></label>
+<label>Length (m)<input id="length" value="300"></label>
+<label>Size (mm²)<input id="size" value="420"></label>
+<label>Load Current (A)<input id="current" value="500"></label>
+<label>Power Factor<input id="pf" value="0.9"></label>
+
+<label>Bonding
+<select id="bonding">
+<option>single-point</option>
+<option>both-end</option>
+<option>cross-bonding</option>
+</select>
+</label>
+</div>
+
+<h3>Checks</h3>
+
+<label><input type="checkbox" id="term"> Termination Installed</label><br>
+<label><input type="checkbox" id="clamp"> Cable Secured</label><br>
+<label><input type="checkbox" id="spacing"> Proper Spacing</label><br>
+<label><input type="checkbox" id="jit1"> JIT Before</label><br>
+<label><input type="checkbox" id="jit2"> JIT After</label><br>
+<label><input type="checkbox" id="cont"> Continuity</label><br>
+<label><input type="checkbox" id="sheath"> Sheath Test</label><br>
+<label><input type="checkbox" id="ground"> Grounding</label><br>
+<label><input type="checkbox" id="phase"> Phase Identified</label><br>
+
+<br>
+<button onclick="evaluate()">Evaluate</button>
+<button onclick="downloadTXT()">Save TXT</button>
+
+</div>
+
+<div class="card">
+<h2>Status</h2>
+
+<div id="mech" class="status gray">Mechanical</div>
+<div id="elec" class="status gray">Electrical</div>
+<div id="safe" class="status gray">Safety</div>
+<div id="overall" class="status gray">Overall</div>
+
+</div>
+
+<div class="card">
+<h2>Report</h2>
+<pre id="report"></pre>
+</div>
+
+</div>
+
+<script>
+
+function ampacity(size){
+    if(size <=150) return 300;
+    if(size <=240) return 450;
+    if(size <=300) return 520;
+    if(size <=400) return 600;
+    if(size <=500) return 680;
+    return 760;
+}
+
+function setStatus(id, pass){
+    let el = document.getElementById(id);
+    el.className = "status " + (pass ? "green":"red");
+    el.innerHTML = pass ? "PASS":"FAIL";
+}
+
+function evaluate(){
+
+    let V = parseFloat(voltage.value);
+    let L = parseFloat(length.value)/1000;
+    let A = parseFloat(size.value);
+    let I = parseFloat(current.value);
+    let pf = parseFloat(pf.value);
+
+    let mech = term.checked && clamp.checked && spacing.checked;
+    let elec = jit1.checked && jit2.checked && cont.checked && sheath.checked;
+    let safe = ground.checked && phase.checked;
+
+    let amp = ampacity(A);
+    let ampOK = I <= amp;
+
+    let R = 17/A;
+    let drop = Math.sqrt(3)*I*R*L*pf;
+    let dropPct = (drop/(V*1000))*100;
+    let dropOK = dropPct < 5;
+
+    let overall = mech && elec && safe && ampOK && dropOK;
+
+    setStatus("mech", mech);
+    setStatus("elec", elec);
+    setStatus("safe", safe);
+    setStatus("overall", overall);
+
+    let report = `
+HV CABLE REPORT
+
+Voltage: ${V} kV
+Length: ${L*1000} m
+Size: ${A} mm²
+
+Ampacity: ${amp} A
+Load: ${I} A
+Voltage Drop: ${dropPct.toFixed(2)} %
+
+Mechanical: ${mech}
+Electrical: ${elec}
+Safety: ${safe}
+
+OVERALL: ${overall ? "READY":"NOT READY"}
+`;
+
+    document.getElementById("report").innerText = report;
+	saveToDatabase(report, overall);
+}
+
+function downloadTXT(){
+    let text = document.getElementById("report").innerText;
+    let blob = new Blob([text], {type:"text/plain"});
+    let a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "HV_Report.txt";
+    a.click();
+}
+
+function saveToDatabase(reportText, overall){
+
+fetch("https://script.google.com/macros/s/AKfycbxkm6XV_-HLD3UVAXhND9v7_bi8t4cQTbgwKH-J-4gSGG8LqTKowbaNBLU99eno4w4w/exec", {
+    method: "POST",
+    body: JSON.stringify({
+        voltage: voltage.value,
+        length: length.value,
+        size: size.value,
+        current: current.value,
+        pf: pf.value,
+        result: overall,
+        report: reportText
+    })
+})
+.then(res => console.log("Saved"))
+.catch(err => console.error(err));
+
+}
+</script>
+
+</body>
+</html>
