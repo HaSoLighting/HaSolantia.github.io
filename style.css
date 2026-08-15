@@ -654,3 +654,462 @@ a.inline-link:hover { opacity: 0.9; }
   transition: transform 0.2s ease;
   cursor: pointer;
 }
+
+/* =========================================================
+   PROFESSIONAL PROFILE / ABOUT
+========================================================= */
+
+.professional-profile {
+  background: #050a16;
+  color: #d5dbea;
+  padding: 90px 0 110px;
+}
+
+.profile-container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+.profile-intro {
+  max-width: 850px;
+  margin-bottom: 90px;
+}
+
+.section-kicker {
+  display: inline-block;
+  color: #ffd447;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin-bottom: 12px;
+}
+
+.profile-intro h1,
+.discipline-heading h2,
+.resume-heading h2 {
+  color: #ffffff;
+  margin: 0 0 18px;
+  line-height: 1.15;
+}
+
+.profile-intro h1 {
+  font-size: clamp(2.3rem, 5vw, 4rem);
+}
+
+.profile-intro p,
+.discipline-heading p,
+.resume-heading p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #b9c2d4;
+}
+
+
+/* =========================================================
+   DISCIPLINE SECTIONS
+========================================================= */
+
+.discipline-section {
+  padding: 25px 0 100px;
+}
+
+.electrical-section {
+  border-top: 1px solid #1f2a40;
+  padding-top: 100px;
+}
+
+.discipline-heading {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 30px;
+  max-width: 950px;
+  margin-bottom: 60px;
+}
+
+.discipline-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffd447;
+  opacity: 0.85;
+}
+
+.discipline-heading h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.profile-block {
+  margin-bottom: 65px;
+}
+
+.profile-block > h3 {
+  color: #ffffff;
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   EXPERIENCE TIMELINE
+========================================================= */
+
+.timeline-card {
+  background: #101d34;
+  border: 1px solid #24334d;
+  border-radius: 20px;
+  padding: 28px;
+  margin-bottom: 22px;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 18px;
+}
+
+.timeline-header h4 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 0 0 6px;
+}
+
+.timeline-header span {
+  color: #aeb9cc;
+}
+
+.timeline-date {
+  color: #ffd447;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.timeline-card ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.timeline-card li {
+  margin: 10px 0;
+  line-height: 1.7;
+  color: #c5cddd;
+}
+
+.timeline-card li::marker {
+  color: #ffd447;
+}
+
+
+/* =========================================================
+   EDUCATION / INFO CARDS
+========================================================= */
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.info-card {
+  background: #101d34;
+  border: 1px solid #24334d;
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.card-label {
+  display: block;
+  color: #ffd447;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 13px;
+}
+
+.info-card h4 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+
+.info-card p {
+  color: #b9c2d4;
+  line-height: 1.7;
+  margin: 8px 0;
+}
+
+.card-subtitle {
+  font-weight: 600;
+  color: #dce2ed !important;
+}
+
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills-wrap span {
+  background: #101d34;
+  border: 1px solid #2a3850;
+  color: #dce2ed;
+  padding: 10px 17px;
+  border-radius: 50px;
+  font-size: 0.92rem;
+}
+
+.skills-wrap span:hover {
+  border-color: #ffd447;
+}
+
+
+/* =========================================================
+   PROJECT CARDS
+========================================================= */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.project-card {
+  background: #101d34;
+  border: 1px solid #24334d;
+  border-radius: 20px;
+  padding: 26px;
+}
+
+.project-icon {
+  width: 44px;
+  height: 44px;
+  background: #1b2a42;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.project-card h4 {
+  color: #ffffff;
+  margin: 0 0 12px;
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+.project-card p {
+  color: #b9c2d4;
+  line-height: 1.7;
+}
+
+.project-year {
+  display: inline-block;
+  color: #ffd447;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   PUBLICATIONS
+========================================================= */
+
+.publication-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.publication-item {
+  background: #101d34;
+  border: 1px solid #24334d;
+  border-radius: 18px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 20px;
+}
+
+.publication-year {
+  color: #ffd447;
+  font-weight: 700;
+}
+
+.publication-item h4 {
+  margin: 0 0 8px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.publication-item p {
+  color: #aeb9cc;
+  margin: 0;
+}
+
+
+/* =========================================================
+   SIMPLE LISTS
+========================================================= */
+
+.simple-list {
+  background: #101d34;
+  border: 1px solid #24334d;
+  border-radius: 20px;
+  padding: 25px 28px;
+}
+
+.simple-list p {
+  margin: 13px 0;
+  line-height: 1.6;
+}
+
+.simple-list span {
+  color: #ffd447;
+  margin-right: 10px;
+}
+
+
+/* =========================================================
+   RESUMES
+========================================================= */
+
+.resume-download-section {
+  border-top: 1px solid #1f2a40;
+  padding-top: 95px;
+}
+
+.resume-heading {
+  max-width: 750px;
+  margin-bottom: 45px;
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+.resume-card {
+  background: #101d34;
+  border: 1px solid #293850;
+  border-radius: 24px;
+  padding: 34px;
+}
+
+.resume-large-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #202e45;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  margin-bottom: 22px;
+}
+
+.resume-card h3 {
+  color: #ffffff;
+  font-size: 1.45rem;
+  margin: 7px 0 14px;
+}
+
+.resume-card p {
+  color: #b9c2d4;
+  line-height: 1.7;
+}
+
+.resume-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+.button-primary,
+.button-secondary {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.button-primary {
+  background: #ffd447;
+  color: #07101e;
+}
+
+.button-primary:hover {
+  background: #ffe175;
+  transform: translateY(-2px);
+}
+
+.button-secondary {
+  color: #ffffff;
+  border: 1px solid #59657b;
+}
+
+.button-secondary:hover {
+  color: #ffd447;
+  border-color: #ffd447;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .discipline-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .education-grid,
+  .resume-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .professional-profile {
+    padding-top: 65px;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .timeline-date {
+    white-space: normal;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-item {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-intro {
+    margin-bottom: 55px;
+  }
+
+}
