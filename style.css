@@ -2578,3 +2578,48 @@ a.btn-secondary {
   }
 
 }
+
+/* Working Together section — light theme */
+.home-process {
+  background: #f6f9fb;
+  color: #172033;
+}
+
+/* Section heading */
+.home-process .section-title {
+  color: #172033;
+}
+
+/* Introductory paragraph */
+.home-process .section-intro {
+  color: #64748b;
+}
+
+/* Process cards */
+.home-process .process-card {
+  background: #ffffff;
+  border: 1px solid #dce3eb;
+}
+
+/* Card headings */
+.home-process .process-card h3,
+.home-process .process-card .card-title {
+  color: #172033;
+}
+
+/* Card descriptions */
+.home-process .process-card p {
+  color: #64748b;
+}
+
+/* Step numbers */
+.home-process .process-step {
+  background: #e6f3f3;
+  color: #078c8c;
+}
+
+/* “Ask a Question” secondary button */
+.home-process .btn-secondary {
+  color: #172033;
+  border-color: #cbd5e1;
+}
