@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Request a Project – HaSolantia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Request lighting analysis, photometric simulation, research, documentation, or design-support services from HaSolantia." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="page">
+  <header>
+    <nav class="nav">
+      <div class="nav-left"><a href="index.html" class="brand-link"><div class="nav-logo-icon"><span>HS</span></div><div class="nav-brand"><div class="nav-brand-title">HaSolantia</div><div class="nav-brand-sub">Power You Trust.</div></div></a></div>
+      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">☰</button>
+      <div class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="services.html">Services &amp; Resources</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="quote.html" class="nav-cta active">Request a Project</a></div>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="container quote-layout">
+        <div>
+          <div class="section-tagline">Project Inquiry</div>
+          <h1 class="section-title">Tell me what you are working on.</h1>
+          <p class="section-intro">Use this form to request lighting simulation, design support, technical research, documentation, or educational content. Sharing a clear scope helps HaSolantia assess fit, timing, and deliverables.</p>
+          <div class="card quote-expectations">
+            <div class="card-title">What happens next</div>
+            <ol class="list"><li>Your inquiry and available project information are reviewed.</li><li>If the work is a good fit, you receive questions or a written scope.</li><li>Work begins only after scope, deliverables, schedule, and fee are accepted.</li></ol>
+          </div>
+          <p class="disclaimer"><strong>Professional notice:</strong> HaSolantia provides technical analysis, research, documentation, and design support. It does not prepare, certify, or stamp engineering drawings or provide services requiring an Oregon Professional Engineer license.</p>
+        </div>
+        <form class="card project-form" action="mailto:projects@hasolantia.com" method="post" enctype="text/plain">
+          <div class="card-title">Request a project</div>
+          <label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required />
+          <label for="organization">Company or organization</label><input id="organization" name="organization" type="text" autocomplete="organization" />
+          <label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required />
+          <label for="service">Requested service</label>
+          <select id="service" name="service" required><option value="">Select one</option><option>Lighting simulation and analysis</option><option>Lighting design support</option><option>Research and technical documentation</option><option>Data analysis and visualization</option><option>Educational content or training</option><option>Other related inquiry</option></select>
+          <label for="location">Project location</label><input id="location" name="location" type="text" placeholder="City, state, or remote" />
+          <label for="deadline">Desired completion date</label><input id="deadline" name="deadline" type="date" />
+          <label for="message">Project description</label><textarea id="message" name="message" rows="7" placeholder="Describe the space or problem, requested deliverables, available files, and schedule." required></textarea>
+          <label class="consent-row" for="consent"><input id="consent" name="consent" type="checkbox" required /><span>I understand that submitting this form does not create a client relationship or guarantee acceptance.</span></label>
+          <button type="submit" class="btn-primary">Send Project Inquiry</button>
+          <p class="small-note">Before publishing, connect this form to a secure form service. The current mail link is a temporary fallback.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer><div class="footer-inner"><div class="footer-row"><div>© <span id="year"></span> HaSolantia. All rights reserved.</div><div class="footer-links"><a href="index.html">Home</a><a href="services.html">Services &amp; Resources</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a></div></div><div class="disclaimer">Services requiring professional licensure must be performed or approved by an appropriately licensed professional.</div></div></footer>
+</div>
+<script>const navToggle=document.getElementById("navToggle");const navLinks=document.getElementById("navLinks");if(navToggle&&navLinks)navToggle.addEventListener("click",()=>navLinks.classList.toggle("open"));const yearSpan=document.getElementById("year");if(yearSpan)yearSpan.textContent=new Date().getFullYear();</script>
+</body>
+</html>
