@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Topics – HaSolantia</title>
+  <title>Services &amp; Resources – HaSolantia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Explore HaSolantia topics in power quality and lighting design." />
+  <meta name="description" content="Explore HaSolantia lighting analysis, design support, technical research, documentation, education, and practical technical resources." />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
 </head>
@@ -14,7 +14,7 @@
   <header>
     <nav class="nav">
       <div class="nav-left">
-        <a href="/" style="display:flex; align-items:center; gap:0.9rem;">
+        <a href="/" class="brand-link">
           <div class="nav-logo-icon"><span>HS</span></div>
           <div class="nav-brand">
             <div class="nav-brand-title">HaSolantia</div>
@@ -27,10 +27,11 @@
 
       <div class="nav-links" id="navLinks">
         <a href="/">Home</a>
-        <a href="/services/" class="active">Topics</a>
+        <a href="/services/" class="active">Services &amp; Resources</a>
         <a href="/portfolio/">Portfolio</a>
         <a href="/about/">About</a>
         <a href="/contact/">Contact</a>
+        <a href="/quote.html" class="nav-cta">Request a Project</a>
       </div>
     </nav>
   </header>
@@ -38,22 +39,100 @@
   <main>
     <section class="hero" style="padding-bottom: 3.2rem;">
       <div class="container">
-        <div class="hero-kicker">Topics</div>
+        <div class="hero-kicker">Services &amp; Technical Resources</div>
         <h1 class="hero-title">
-          Explore the two main tracks of HaSolantia:
-          <span>power quality and lighting design.</span>
+          Practical lighting support,
+          <span>research, and technical knowledge.</span>
         </h1>
         <p class="hero-subtitle" style="max-width: 760px;">
-          This page organizes the educational side of the website into two growing knowledge areas.
-          Each track combines practical explanations, foundational concepts, and article-style pages
-          that can expand over time.
+          HaSolantia provides clearly scoped lighting-analysis, research, and
+          documentation services while continuing to publish practical educational
+          resources in architectural lighting and electrical power quality.
+        </p>
+        <div class="hero-actions">
+          <a href="#client-services" class="btn-primary">Explore Services</a>
+          <a href="/quote.html" class="btn-secondary">Discuss a Project</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="client-services" style="padding-top: 0;">
+      <div class="container">
+        <div class="section-tagline">Client Services</div>
+        <h2 class="section-title">Defined support for lighting and technical projects</h2>
+        <p class="section-intro">
+          Services are individually scoped according to the available project
+          information, requested deliverables, schedule, and applicable
+          professional requirements.
+        </p>
+
+        <div class="grid-3">
+          <article class="card" id="lighting-analysis">
+            <div class="card-icon">💡</div>
+            <div class="card-title">Lighting Simulation &amp; Analysis</div>
+            <p class="card-text">Simulation-based evaluation for interior and exterior lighting applications.</p>
+            <ul class="list">
+              <li>AGi32 and DIALux simulation</li>
+              <li>Illuminance and uniformity evaluation</li>
+              <li>Glare and visual-comfort review</li>
+              <li>Energy and light-trespass assessment</li>
+            </ul>
+          </article>
+
+          <article class="card" id="lighting-design-support">
+            <div class="card-icon">📐</div>
+            <div class="card-title">Lighting Design Support</div>
+            <p class="card-text">Technical and visual support for architects, designers, educators, and project teams.</p>
+            <ul class="list">
+              <li>Conceptual lighting layouts</li>
+              <li>Luminaire research and comparison</li>
+              <li>Fixture schedules and design narratives</li>
+              <li>CAD and presentation documentation</li>
+            </ul>
+          </article>
+
+          <article class="card" id="research-documentation">
+            <div class="card-icon">📊</div>
+            <div class="card-title">Research &amp; Technical Documentation</div>
+            <p class="card-text">Clear synthesis of research evidence, standards, project data, and technical criteria.</p>
+            <ul class="list">
+              <li>Literature and standards reviews</li>
+              <li>Technical reports and white papers</li>
+              <li>Data analysis and visualization</li>
+              <li>Educational and training materials</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="section-actions">
+          <a href="/quote.html" class="btn-primary">Request a Project</a>
+          <a href="/contact/" class="btn-secondary">Ask a Question</a>
+        </div>
+
+        <hr class="soft" />
+        <p class="disclaimer">
+          <strong>Professional notice:</strong> HaSolantia provides technical
+          analysis, research, documentation, and design support. It does not
+          prepare, certify, or stamp engineering drawings or provide services
+          requiring an Oregon Professional Engineer license.
+        </p>
+      </div>
+    </section>
+
+    <section id="technical-resources">
+      <div class="container">
+        <div class="section-tagline">Knowledge Hub</div>
+        <h2 class="section-title">Technical Resources</h2>
+        <p class="section-intro">
+          The following educational tracks are separate from client services.
+          They share practical explanations, foundational concepts, and case-based learning.
         </p>
       </div>
     </section>
 
     <section id="power-quality" style="padding-top: 0;">
       <div class="container">
-        <div class="section-tagline">Track 01</div>
+        <div class="section-tagline">Resource Track 01</div>
         <h2 class="section-title">Power Quality</h2>
         <p class="section-intro">
           Learn how electrical conditions affect equipment behavior, reliability, and safety.
@@ -161,7 +240,7 @@
 
     <section id="lighting-design">
       <div class="container">
-        <div class="section-tagline">Track 02</div>
+        <div class="section-tagline">Resource Track 02</div>
         <h2 class="section-title">Lighting Design</h2>
         <p class="section-intro">
           Explore lighting design through concepts, metrics, and project-based thinking.
@@ -266,8 +345,9 @@
         <hr class="soft" />
 
         <p class="disclaimer">
-          Topics on this page are educational and informational. Some are already published,
-          while others are planned as part of the ongoing development of the HaSolantia knowledge hub.
+          Resources on this page are educational and informational and are not
+          a substitute for project-specific professional advice. Some are already
+          published, while others are planned as the knowledge hub develops.
         </p>
       </div>
     </section>
@@ -282,11 +362,14 @@
           <a href="/portfolio/">Portfolio</a>
           <a href="/about/">About</a>
           <a href="/contact/">Contact</a>
+          <a href="/quote.html">Request a Project</a>
         </div>
       </div>
 
       <div class="disclaimer">
-        This website is for educational and portfolio purposes only. No services are offered or solicited through this site at this time.
+        HaSolantia provides technical analysis, research, documentation, and
+        design support. Services requiring professional licensure must be
+        performed or approved by an appropriately licensed professional.
       </div>
     </div>
   </footer>
