@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>HV Cable Pre-Commissioning Tool</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Educational HV cable screening tool for exploring simplified ampacity, voltage-drop, and checklist concepts.">
+<title>Educational HV Cable Screening Tool – HaSolantia</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
 
 <style>
 body {
-    font-family: Arial;
+    font-family: "Montserrat", Arial, sans-serif;
     background: #f4f6f7;
-    padding: 20px;
+    color: #172635;
 }
 
 .container {
@@ -25,6 +29,16 @@ body {
 }
 
 h1 { text-align: center; }
+.tool-main { padding: 40px 20px; }
+.tool-notice {
+    background: #fff4d6;
+    color: #5d4600;
+    border: 1px solid #e8c35a;
+    border-radius: 12px;
+    padding: 15px 18px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
 
 .grid {
     display: grid;
@@ -35,6 +49,8 @@ h1 { text-align: center; }
 input, select {
     width: 100%;
     padding: 8px;
+    border: 1px solid #b9c4ce;
+    border-radius: 6px;
 }
 
 .status {
@@ -67,19 +83,40 @@ pre {
 
 <body>
 
+<div class="page" id="top">
+<header>
+<nav class="nav">
+    <div class="nav-left">
+        <a href="/" class="brand-link"><div class="nav-logo-icon"><span>HS</span></div><div class="nav-brand"><div class="nav-brand-title">HaSolantia</div><div class="nav-brand-sub">Power You Trust.</div></div></a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">☰</button>
+    <div class="nav-links" id="navLinks"><a href="/">Home</a><a href="/services/">Services &amp; Resources</a><a href="/portfolio/">Portfolio</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/quote.html" class="nav-cta">Request a Project</a></div>
+</nav>
+</header>
+
+<main class="tool-main">
 <div class="container">
 
-<h1>HV Cable Pre-Commissioning Tool</h1>
+<h1>Educational HV Cable Screening Tool</h1>
+
+<div class="tool-notice">
+<strong>Important:</strong> This browser tool is an educational demonstration,
+not a commissioning certificate or engineering approval. Its ampacity values
+and voltage-drop calculation are simplified and do not account for all cable,
+installation, thermal, reactance, bonding, code, manufacturer, testing, or
+site-specific requirements. Results must be independently verified by an
+appropriately qualified professional.
+</div>
 
 <div class="card">
 <h2>Inputs</h2>
 
 <div class="grid">
-<label>Voltage (kV)<input id="voltage" value="34.5"></label>
-<label>Length (m)<input id="length" value="300"></label>
-<label>Size (mm²)<input id="size" value="420"></label>
-<label>Load Current (A)<input id="current" value="500"></label>
-<label>Power Factor<input id="pf" value="0.9"></label>
+<label>Voltage (kV)<input id="voltage" type="number" min="0.1" step="0.1" value="34.5"></label>
+<label>Length (m)<input id="length" type="number" min="0.1" step="0.1" value="300"></label>
+<label>Size (mm²)<input id="size" type="number" min="1" step="1" value="420"></label>
+<label>Load Current (A)<input id="current" type="number" min="0" step="0.1" value="500"></label>
+<label>Power Factor<input id="pf" type="number" min="0" max="1" step="0.01" value="0.9"></label>
 
 <label>Bonding
 <select id="bonding">
@@ -103,7 +140,7 @@ pre {
 <label><input type="checkbox" id="phase"> Phase Identified</label><br>
 
 <br>
-<button onclick="evaluate()">Evaluate</button>
+<button onclick="evaluate()">Run Educational Screening</button>
 <button onclick="downloadTXT()">Save TXT</button>
 
 </div>
@@ -123,6 +160,12 @@ pre {
 <pre id="report"></pre>
 </div>
 
+<p class="small-note" style="color:#566575; line-height:1.6;">No information entered in this revised tool is transmitted to HaSolantia or saved to a database.</p>
+
+</div>
+</main>
+
+<footer><div class="footer-inner"><div class="footer-row"><div>© <span id="year"></span> HaSolantia. All rights reserved.</div><div class="footer-links"><a href="/">Home</a><a href="/services/">Services &amp; Resources</a><a href="/about/">About</a><a href="/contact/">Contact</a></div></div><div class="disclaimer">Educational screening only. This tool does not constitute project-specific engineering advice, approval, or certification.</div></div></footer>
 </div>
 
 <script>
@@ -148,7 +191,12 @@ function evaluate(){
     let L = parseFloat(length.value)/1000;
     let A = parseFloat(size.value);
     let I = parseFloat(current.value);
-    let pf = parseFloat(pf.value);
+    let powerFactor = parseFloat(document.getElementById("pf").value);
+
+    if (![V, L, A, I, powerFactor].every(Number.isFinite) || V <= 0 || L <= 0 || A <= 0 || I < 0 || powerFactor < 0 || powerFactor > 1) {
+        alert("Please enter valid positive values and a power factor between 0 and 1.");
+        return;
+    }
 
     let mech = term.checked && clamp.checked && spacing.checked;
     let elec = jit1.checked && jit2.checked && cont.checked && sheath.checked;
@@ -158,7 +206,7 @@ function evaluate(){
     let ampOK = I <= amp;
 
     let R = 17/A;
-    let drop = Math.sqrt(3)*I*R*L*pf;
+    let drop = Math.sqrt(3)*I*R*L*powerFactor;
     let dropPct = (drop/(V*1000))*100;
     let dropOK = dropPct < 5;
 
@@ -184,11 +232,12 @@ Mechanical: ${mech}
 Electrical: ${elec}
 Safety: ${safe}
 
-OVERALL: ${overall ? "READY":"NOT READY"}
+SCREENING RESULT: ${overall ? "PRELIMINARY PASS":"REVIEW REQUIRED"}
+
+Educational screening only — not a commissioning approval.
 `;
 
     document.getElementById("report").innerText = report;
-	saveToDatabase(report, overall);
 }
 
 function downloadTXT(){
@@ -200,24 +249,11 @@ function downloadTXT(){
     a.click();
 }
 
-function saveToDatabase(reportText, overall){
-
-fetch("https://script.google.com/macros/s/AKfycbxkm6XV_-HLD3UVAXhND9v7_bi8t4cQTbgwKH-J-4gSGG8LqTKowbaNBLU99eno4w4w/exec", {
-    method: "POST",
-    body: JSON.stringify({
-        voltage: voltage.value,
-        length: length.value,
-        size: size.value,
-        current: current.value,
-        pf: pf.value,
-        result: overall,
-        report: reportText
-    })
-})
-.then(res => console.log("Saved"))
-.catch(err => console.error(err));
-
-}
+const navToggle = document.getElementById("navToggle");
+const navLinks = document.getElementById("navLinks");
+if (navToggle && navLinks) navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+const yearSpan = document.getElementById("year");
+if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 </script>
 
 </body>
