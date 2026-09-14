@@ -1,31 +1,78 @@
 [
   {
-    "title": "Fashion Retail Photometric Study",
-    "category": "Lighting Analysis",
-    "image": "/images/retail-lighting.png",
-    "description": "Photometric simulation and lighting performance analysis for a fashion retail environment.",
-    "year": "2026",
+    "title": "Retail Lighting Design",
+    "type": "Academic case study",
+    "date": "June 2024",
+
+    "image": "/images/retail-lighting-cover.png",
+    "alt": "Retail lighting design project cover",
+
+    "description": "This project was developed in AGi32 for a retail space to compare the concepts of spaciousness and closure by following John Flynn’s psychological principles. The aim was to create two different lighting scenes that support customer experience while also addressing illuminance, uniformity, color rendering, sustainability, biological needs of the sales personnel, visual task at the counter, code and standard considerations, and glare control.",
+
+    "description2": "The spaciousness scene was designed with high-intensity, shadow-free lighting and peripheral wall lighting to create an open and energetic environment. The closure scene used lower intensity, non-uniform lighting with no peripheral lighting to create a more intimate atmosphere. Track lights were used to highlight merchandise, 2'×2' panel luminaires provided general illumination, and cove lighting was used to enhance the perception of spaciousness.",
+
+    "highlights": [
+      "Software: AGi32, AutoCAD",
+      "Focus: spaciousness and closure in retail environments",
+      "Integrated ambient, accent, display, cove, and counter lighting",
+      "Evaluated illuminance, uniformity, color rendering, energy use, and glare"
+    ],
+
+    "caseStudy": "/portfolio-retail-lighting.html",
+    "pdf": "/pdfs/retail-lighting-design.pdf",
+
     "featured": true,
     "published": true
   },
 
   {
-    "title": "Gallery Lighting Study",
-    "category": "Architectural Lighting",
-    "image": "/images/gallery-lighting.png",
-    "description": "Lighting analysis for artwork display, visual presentation, and spatial illumination.",
-    "year": "2026",
+    "title": "Sustainable Outdoor Parking Lot Lighting Design",
+    "type": "Academic case study",
+    "date": "October 2024",
+
+    "image": "/images/parking-lot-cover.png",
+    "alt": "Outdoor parking lot lighting project cover",
+
+    "description": "This project focused on the design of a sustainable outdoor parking lot lighting system in AGi32. The objective was to develop a lighting solution that complies with IES RP-8-22, LEED SS Credit for Light Pollution Reduction, ANSI/ASHRAE/IES 90.1, and IDA/IES MLO-2011 guidance while maintaining visibility, uniformity, energy efficiency, and low light trespass.",
+
+    "description2": "The parking lot was approximately 660' × 352'. The final layout used GLN Galleon II luminaires from Cooper Lighting Solutions with poles spaced 60 feet horizontally and 57 feet vertically. A parametric comparison was also carried out to study the effect of pole height on average horizontal illuminance, maximum illuminance, uniformity, and vertical illuminance. The project showed that increasing pole height reduced average and maximum illuminance but improved uniformity.",
+
+    "highlights": [
+      "Software: AGi32",
+      "Focus: sustainability, uniformity, pole spacing, and light trespass",
+      "Included parametric comparison of pole height",
+      "Addressed LEED, IES RP-8-22, ANSI/ASHRAE/IES 90.1, and IDA/IES MLO-2011"
+    ],
+
+    "pdf": "/pdfs/outdoor-parking-lot-lighting.pdf",
+
     "featured": true,
     "published": true
   },
 
   {
-    "title": "Classroom Lighting Study",
-    "category": "Lighting Analysis",
-    "image": "/images/classroom-lighting.png",
-    "description": "Lighting analysis and visualization for an educational environment.",
-    "year": "2026",
-    "featured": false,
+    "title": "IES Brandston Submission – Office Renovation Lighting Concept",
+    "type": "Competition submission",
+    "date": "May 2025",
+
+    "image": "/images/brandston-cover.png",
+    "alt": "IES Brandston office renovation lighting concept cover",
+
+    "description": "This project aimed to develop a lighting design for the renovation of the first floor of a five-story office building in Sydney. The spaces within the scope included vestibules, general and executive lobbies, corridors, a lounge, and a multipurpose room. The design goal was to create one cohesive and forward-looking identity while supporting the different needs of each space.",
+
+    "description2": "The concept focused on blending daylight and artificial light in the same environment, allowing transitions from natural daylight to electric lighting to feel continuous and immersive. Public zones such as the lobbies and multipurpose room were designed with higher ambient and more uniform lighting to express spaciousness, while corridors and lounge areas used lower ambient levels and more non-uniform lighting to create a calmer atmosphere. The design also incorporated layered lighting through ambient, task, line-of-light, and accent strategies, including artwork highlighting and architectural emphasis.",
+
+    "highlights": [
+      "Focus: office renovation, layered lighting, and design identity",
+      "Spaces: vestibules, lobbies, corridors, lounge, and multipurpose room",
+      "Included rendered views, lighting plans, fixture schedules, and concept imagery",
+      "Emphasized daylight integration and a cohesive architectural lighting language"
+    ],
+
+    "caseStudy": "/portfolio-office-lighting.html",
+    "pdf": "/pdfs/ies-brandston-project.pdf",
+
+    "featured": true,
     "published": true
   }
 ]
