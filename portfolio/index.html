@@ -64,154 +64,9 @@
           A selection of academic and competition projects combining concept,
           performance criteria, simulation, research, and technical documentation.
         </p>
-
-        <!-- Project 1 -->
-        <article class="card portfolio-project">
-          <img
-            src="/images/retail-lighting-cover.png"
-            alt="Retail lighting design project cover"
-            class="portfolio-image"
-          />
-
-          <div class="portfolio-content">
-            <div class="small-note" style="margin-bottom:0.35rem;">Academic case study · June 2024</div>
-            <h3 class="card-title">Retail Lighting Design</h3>
-
-            <p class="card-text">
-              This project was developed in AGi32 for a retail space to compare the concepts of
-              spaciousness and closure by following John Flynn’s psychological principles.
-              The aim was to create two different lighting scenes that support customer experience
-              while also addressing illuminance, uniformity, color rendering, sustainability,
-              biological needs of the sales personnel, visual task at the counter, code and
-              standard considerations, and glare control.
-            </p>
-
-            <p class="card-text">
-              The spaciousness scene was designed with high-intensity, shadow-free lighting and
-              peripheral wall lighting to create an open and energetic environment. The closure
-              scene used lower intensity, non-uniform lighting with no peripheral lighting to
-              create a more intimate atmosphere. Track lights were used to highlight merchandise,
-              2'×2' panel luminaires provided general illumination, and cove lighting was used to
-              enhance the perception of spaciousness.
-            </p>
-
-            <ul class="list">
-              <li>Software: AGi32, AutoCAD</li>
-              <li>Focus: spaciousness and closure in retail environments</li>
-              <li>Integrated ambient, accent, display, cove, and counter lighting</li>
-              <li>Evaluated illuminance, uniformity, color rendering, energy use, and glare</li>
-            </ul>
-
-            <p style="margin-top: 0.9rem;">
-              <a href="/portfolio-retail-lighting.html" class="inline-link">
-                View case study
-              </a>
-              &nbsp;·&nbsp;
-              <a href="/pdfs/retail-lighting-design.pdf" class="inline-link" target="_blank" rel="noopener noreferrer">
-                Project PDF
-              </a>
-            </p>
-          </div>
-        </article>
-
-        <hr class="soft" />
-
-        <!-- Project 2 -->
-        <article class="card portfolio-project">
-          <img
-            src="/images/parking-lot-cover.png"
-            alt="Outdoor parking lot lighting project cover"
-            class="portfolio-image"
-          />
-
-          <div class="portfolio-content">
-            <div class="small-note" style="margin-bottom:0.35rem;">Academic case study · October 2024</div>
-            <h3 class="card-title">Sustainable Outdoor Parking Lot Lighting Design</h3>
-
-            <p class="card-text">
-              This project focused on the design of a sustainable outdoor parking lot lighting
-              system in AGi32. The objective was to develop a lighting solution that complies
-              with IES RP-8-22, LEED SS Credit for Light Pollution Reduction, ANSI/ASHRAE/IES
-              90.1, and IDA/IES MLO-2011 guidance while maintaining visibility, uniformity,
-              energy efficiency, and low light trespass.
-            </p>
-
-            <p class="card-text">
-              The parking lot was approximately 660' × 352'. The final layout used GLN Galleon II
-              luminaires from Cooper Lighting Solutions with poles spaced 60 feet horizontally and
-              57 feet vertically. A parametric comparison was also carried out to study the effect
-              of pole height on average horizontal illuminance, maximum illuminance, uniformity,
-              and vertical illuminance. The project showed that increasing pole height reduced
-              average and maximum illuminance but improved uniformity.
-            </p>
-
-            <ul class="list">
-              <li>Software: AGi32</li>
-              <li>Focus: sustainability, uniformity, pole spacing, and light trespass</li>
-              <li>Included parametric comparison of pole height</li>
-              <li>Addressed LEED, IES RP-8-22, ANSI/ASHRAE/IES 90.1, and IDA/IES MLO-2011</li>
-            </ul>
-
-            <p style="margin-top: 0.9rem;">
-              <a href="/pdfs/outdoor-parking-lot-lighting.pdf" class="inline-link" target="_blank" rel="noopener noreferrer">
-                View full project PDF
-              </a>
-            </p>
-          </div>
-        </article>
-
-        <hr class="soft" />
-
-        <!-- Project 3 -->
-        <article class="card portfolio-project">
-          <img
-            src="/images/brandston-cover.png"
-            alt="IES Brandston office renovation lighting concept cover"
-            class="portfolio-image"
-          />
-
-          <div class="portfolio-content">
-            <div class="small-note" style="margin-bottom:0.35rem;">Competition submission · May 2025</div>
-            <h3 class="card-title">IES Brandston Submission – Office Renovation Lighting Concept</h3>
-
-            <p class="card-text">
-              This project aimed to develop a lighting design for the renovation of the first floor
-              of a five-story office building in Sydney. The spaces within the scope included
-              vestibules, general and executive lobbies, corridors, a lounge, and a multipurpose room.
-              The design goal was to create one cohesive and forward-looking identity while supporting
-              the different needs of each space.
-            </p>
-
-            <p class="card-text">
-              The concept focused on blending daylight and artificial light in the same environment,
-              allowing transitions from natural daylight to electric lighting to feel continuous and
-              immersive. Public zones such as the lobbies and multipurpose room were designed with
-              higher ambient and more uniform lighting to express spaciousness, while corridors and
-              lounge areas used lower ambient levels and more non-uniform lighting to create a calmer
-              atmosphere. The design also incorporated layered lighting through ambient, task,
-              line-of-light, and accent strategies, including artwork highlighting and architectural emphasis.
-            </p>
-
-            <ul class="list">
-              <li>Focus: office renovation, layered lighting, and design identity</li>
-              <li>Spaces: vestibules, lobbies, corridors, lounge, and multipurpose room</li>
-              <li>Included rendered views, lighting plans, fixture schedules, and concept imagery</li>
-              <li>Emphasized daylight integration and a cohesive architectural lighting language</li>
-            </ul>
-
-            <p style="margin-top: 0.9rem;">
-              <a href="/portfolio-office-lighting.html" class="inline-link">
-                View case study
-              </a>
-              &nbsp;·&nbsp;
-              <a href="/pdfs/ies-brandston-project.pdf" class="inline-link" target="_blank" rel="noopener noreferrer">
-                Project PDF
-              </a>
-            </p>
-          </div>
-        </article>
-
-        <hr class="soft" />
+        
+        <div id="projects-container"></div>
+        
 
         <div class="card" style="max-width: 940px;">
           <div class="card-title">Portfolio note</div>
@@ -263,6 +118,201 @@
 
   const yearSpan = document.getElementById("year");
   if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+  // ======================================
+// LOAD PORTFOLIO PROJECTS FROM JSON
+// ======================================
+
+const projectsContainer =
+  document.getElementById("projects-container");
+
+if (projectsContainer) {
+
+  fetch("/data/projects.json")
+    .then(response => {
+
+      if (!response.ok) {
+        throw new Error("Could not load projects.json");
+      }
+
+      return response.json();
+
+    })
+
+    .then(projects => {
+
+      const publishedProjects =
+        projects.filter(project => project.published !== false);
+
+      publishedProjects.forEach((project, index) => {
+
+        const article =
+          document.createElement("article");
+
+        article.className =
+          "card portfolio-project";
+
+
+        article.innerHTML = `
+
+          <img
+            src="${project.image}"
+            alt="${project.alt || project.title}"
+            class="portfolio-image"
+          />
+
+          <div class="portfolio-content">
+
+            <div
+              class="small-note"
+              style="margin-bottom:0.35rem;"
+            >
+              ${project.type || ""}
+              ${project.date ? " · " + project.date : ""}
+            </div>
+
+
+            <h3 class="card-title">
+              ${project.title}
+            </h3>
+
+
+            <p class="card-text">
+              ${project.description}
+            </p>
+
+
+            ${
+              project.description2
+              ? `
+                <p class="card-text">
+                  ${project.description2}
+                </p>
+              `
+              : ""
+            }
+
+
+            ${
+              project.highlights
+              ? `
+                <ul class="list">
+                  ${project.highlights
+                    .map(item => `<li>${item}</li>`)
+                    .join("")}
+                </ul>
+              `
+              : ""
+            }
+
+
+            ${
+              project.caseStudy ||
+              project.pdf
+
+              ? `
+
+                <p style="margin-top: 0.9rem;">
+
+                  ${
+                    project.caseStudy
+                    ? `
+                      <a
+                        href="${project.caseStudy}"
+                        class="inline-link"
+                      >
+                        View case study
+                      </a>
+                    `
+                    : ""
+                  }
+
+
+                  ${
+                    project.caseStudy &&
+                    project.pdf
+
+                    ? "&nbsp;·&nbsp;"
+
+                    : ""
+                  }
+
+
+                  ${
+                    project.pdf
+                    ? `
+                      <a
+                        href="${project.pdf}"
+                        class="inline-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Project PDF
+                      </a>
+                    `
+                    : ""
+                  }
+
+                </p>
+
+              `
+              : ""
+            }
+
+          </div>
+
+        `;
+
+
+        projectsContainer.appendChild(article);
+
+
+        if (
+          index <
+          publishedProjects.length - 1
+        ) {
+
+          const divider =
+            document.createElement("hr");
+
+          divider.className = "soft";
+
+          projectsContainer.appendChild(divider);
+
+        }
+
+      });
+
+    })
+
+    .catch(error => {
+
+      console.error(
+        "Portfolio loading error:",
+        error
+      );
+
+      projectsContainer.innerHTML = `
+
+        <div class="card">
+
+          <div class="card-title">
+            Projects unavailable
+          </div>
+
+          <p class="card-text">
+            Portfolio projects could not
+            be loaded at this time.
+          </p>
+
+        </div>
+
+      `;
+
+    });
+
+}
+  
 </script>
 </body>
 </html>
