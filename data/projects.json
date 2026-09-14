@@ -2,7 +2,7 @@
   {
     "title": "Fashion Retail Photometric Study",
     "category": "Lighting Analysis",
-    "image": "/assets/images/retail-lighting.png",
+    "image": "/images/retail-lighting.png",
     "description": "Photometric simulation and lighting performance analysis for a fashion retail environment.",
     "year": "2026",
     "featured": true,
@@ -12,7 +12,7 @@
   {
     "title": "Gallery Lighting Study",
     "category": "Architectural Lighting",
-    "image": "/assets/images/gallery-lighting.png",
+    "image": "/images/gallery-lighting.png",
     "description": "Lighting analysis for artwork display, visual presentation, and spatial illumination.",
     "year": "2026",
     "featured": true,
@@ -22,7 +22,7 @@
   {
     "title": "Classroom Lighting Study",
     "category": "Lighting Analysis",
-    "image": "/assets/images/classroom-lighting.png",
+    "image": "/images/classroom-lighting.png",
     "description": "Lighting analysis and visualization for an educational environment.",
     "year": "2026",
     "featured": false,
