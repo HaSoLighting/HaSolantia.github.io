@@ -422,184 +422,146 @@ header {
 }
 
 
-/* =========================================================
-   HERO
-========================================================= */
 
-.hero {
-  padding-top: 4.2rem;
-  padding-bottom: 4.8rem;
+/* ==============================================
+   DYNAMIC HERO
+============================================== */
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 78vh;
+  min-height: 620px;
+  overflow: hidden;
+  background: #07182d;
 }
 
-.hero-inner {
-  display: grid;
+.slide {
+  position: absolute;
+  inset: 0;
 
-  grid-template-columns:
-    minmax(0, 1.4fr)
-    minmax(0, 1fr);
+  background-size: cover;
+  background-position: center;
 
-  gap: 3rem;
+  opacity: 0;
+  visibility: hidden;
 
-  align-items: center;
+  transform: scale(1.05);
+
+  transition:
+    opacity 1s ease,
+    visibility 1s ease,
+    transform 6s ease;
 }
 
-.hero-kicker {
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-
-  font-size: 0.76rem;
-
-  color: var(--color-primary);
-
-  margin-bottom: 0.8rem;
-
-  font-weight: 600;
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  z-index: 2;
 }
 
-.hero-title {
-  font-size:
-    clamp(2rem, 3vw + 1.4rem, 3.05rem);
+.hero-overlay {
+  position: absolute;
+  inset: 0;
 
-  line-height: 1.15;
-
-  margin-bottom: 0.6rem;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 15, 30, 0.92) 0%,
+      rgba(4, 15, 30, 0.72) 45%,
+      rgba(4, 15, 30, 0.28) 100%
+    );
 }
 
-.hero-title span {
-  color: var(--color-primary);
-}
+.hero-slide-content {
+  position: relative;
+  z-index: 3;
 
-.hero-subtitle {
-  color: var(--color-text-soft);
+  height: 100%;
 
-  max-width: 560px;
-
-  margin-bottom: 1.2rem;
-}
-
-.hero-actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 
-  gap: 0.8rem;
+  max-width: 760px;
 
-  margin-bottom: 0.9rem;
+  color: white;
 }
 
-.btn-primary {
-  border-radius: 999px;
-
-  background: var(--color-primary);
-  color: #111827;
-
-  padding: 0.78rem 1.45rem;
-
-  font-weight: 650;
-  font-size: 0.95rem;
-
-  border: none;
-
-  cursor: pointer;
-
-  display: inline-flex;
-  align-items: center;
-
-  gap: 0.5rem;
-
-  box-shadow:
-    0 20px 45px rgba(0, 0, 0, 0.55);
+.hero-slider .hero-title {
+  color: white;
 }
 
-.btn-secondary {
-  border-radius: 999px;
+.hero-slider .hero-title span {
+  color: #f2c65d;
+}
+
+.hero-slider .hero-subtitle {
+  max-width: 680px;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.slider-dots {
+  position: absolute;
+  z-index: 10;
+
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+
+  padding: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
 
   background: transparent;
 
-  padding: 0.78rem 1.35rem;
-
-  font-weight: 520;
-  font-size: 0.9rem;
-
-  border:
-    1px solid rgba(255, 255, 255, 0.22);
-
-  color: var(--color-text-soft);
-
   cursor: pointer;
 
-  display: inline-flex;
-  align-items: center;
-
-  gap: 0.45rem;
+  transition: all 0.3s ease;
 }
 
-.hero-card {
-  background:
-    radial-gradient(
-      circle at top,
-      #1e3259,
-      #050915 70%
-    );
-
-  border-radius: 26px;
-
-  padding: 1.6rem 1.7rem;
-
-  box-shadow: var(--shadow-soft);
-
-  border:
-    1px solid rgba(255, 255, 255, 0.04);
-}
-
-.hero-card-title {
-  font-size: 0.98rem;
-  font-weight: 650;
-
-  margin-bottom: 0.55rem;
-}
-
-.hero-card p {
-  font-size: 0.86rem;
-
-  color: var(--color-text-soft);
-
-  margin-bottom: 0.9rem;
-}
-
-.hero-card-list {
-  list-style: none;
-
-  font-size: 0.82rem;
-
-  display: grid;
-
-  gap: 0.35rem;
-
-  color: var(--color-text-soft);
-}
-
-.hero-card-list li::before {
-  content: "•";
-
-  color: var(--color-primary);
-
-  display: inline-block;
-
-  width: 1rem;
+.dot.active {
+  width: 28px;
+  border-radius: 20px;
+  background: #f2c65d;
+  border-color: #f2c65d;
 }
 
 
-@media (max-width: 900px) {
+/* MOBILE */
 
-  .hero-inner {
-    grid-template-columns: minmax(0, 1fr);
+@media (max-width: 768px) {
+
+  .hero-slider {
+    height: 75vh;
+    min-height: 560px;
   }
 
-  .hero-card {
-    order: -1;
+  .hero-slide-content {
+    padding-top: 40px;
+    padding-bottom: 70px;
   }
-}
 
+  .hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(4, 15, 30, 0.92),
+        rgba(4, 15, 30, 0.65)
+      );
+  }
+
+}
 
 /* =========================================================
    GENERAL CARDS / GRIDS
