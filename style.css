@@ -319,6 +319,11 @@ header {
   justify-content: center;
 
   flex-shrink: 0;
+
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 4px;
+  box-sizing: border-box;
 }
 
 .nav-logo-icon img {
