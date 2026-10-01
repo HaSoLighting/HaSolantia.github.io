@@ -1,5 +1,7 @@
 [
   {
+    "id": "retail-lighting",
+
     "title": "Retail Lighting Design Study",
     "category": "design",
     "type": "Academic Design Study",
@@ -12,6 +14,91 @@
 
     "description2": "Two contrasting lighting scenes were developed. The spaciousness scene used higher-intensity, more uniform illumination together with peripheral wall lighting to create an open and energetic environment. The closure scene used lower-intensity, non-uniform lighting with reduced peripheral illumination to create a more intimate atmosphere. Track lighting, 2' × 2' panel luminaires, cove lighting, accent lighting, and task lighting were integrated into the overall design strategy.",
 
+    "overview": "The study examined how lighting intensity, distribution, contrast, peripheral illumination, and layered lighting strategies could be used to create two distinct psychological impressions within the same retail environment.",
+
+    "focus": [
+      "Retail lighting",
+      "Spaciousness and closure",
+      "Visual hierarchy",
+      "Customer experience",
+      "Lighting performance"
+    ],
+
+    "tools": [
+      "AGi32",
+      "AutoCAD",
+      "Manufacturer photometric files"
+    ],
+
+    "scope": [
+      "Lighting concept development",
+      "Photometric simulation",
+      "Luminaire application",
+      "Performance evaluation",
+      "Technical documentation"
+    ],
+
+    "deliverables": [
+      "Lighting layout",
+      "Calculation grids",
+      "Rendered views",
+      "Fixture selection",
+      "Design narrative"
+    ],
+
+    "objectives": [
+      {
+        "title": "Spaciousness",
+        "description": "The spaciousness scene used higher-intensity, more uniform illumination together with peripheral wall lighting to create a brighter, more open, and visually expansive retail environment."
+      },
+      {
+        "title": "Closure",
+        "description": "The closure scene used lower-intensity, non-uniform lighting with reduced peripheral illumination to create a more intimate and visually contained atmosphere."
+      }
+    ],
+
+    "strategies": [
+      {
+        "title": "Ambient Lighting",
+        "description": "2' × 2' panel luminaires provided the principal ambient illumination and established the general lighting level throughout the space."
+      },
+      {
+        "title": "Accent and Display Lighting",
+        "description": "Track lighting was used to highlight merchandise, strengthen visual hierarchy, and create contrast between displays and surrounding areas."
+      },
+      {
+        "title": "Cove and Peripheral Lighting",
+        "description": "Cove and peripheral lighting were used selectively to reinforce spatial perception, particularly in the spaciousness scene."
+      }
+    ],
+
+    "performance": [
+      {
+        "title": "Illuminance and Uniformity",
+        "description": "Horizontal illumination and distribution were evaluated to support retail activity, circulation, displays, and visual tasks."
+      },
+      {
+        "title": "Visual Comfort",
+        "description": "Luminaire placement, brightness, contrast, and potential glare were considered in relation to customer and employee comfort."
+      },
+      {
+        "title": "Energy and Sustainability",
+        "description": "Lighting power, luminaire selection, and system efficiency were considered as part of the design evaluation."
+      },
+      {
+        "title": "Color Quality",
+        "description": "Color rendering and appearance were considered to support merchandise presentation."
+      },
+      {
+        "title": "Staff Lighting Needs",
+        "description": "The design considered the needs of sales personnel who may spend extended periods within the retail environment."
+      },
+      {
+        "title": "Task Lighting",
+        "description": "Counter and transaction areas were considered separately to provide suitable illumination for visual tasks."
+      }
+    ],
+
     "highlights": [
       "Software: AGi32, AutoCAD",
       "Studied spaciousness and closure in retail environments",
@@ -21,14 +108,40 @@
       "Applied applicable lighting criteria and design standards"
     ],
 
-    "caseStudy": "/portfolio-retail-lighting.html",
+    "gallery": [
+      {
+        "image": "/assets/projects/retail-lighting/img-01-layout.png",
+        "alt": "Retail lighting fixture layout",
+        "title": "Fixture Layout",
+        "caption": "Lighting layout showing fixture organization and distribution."
+      },
+      {
+        "image": "/assets/projects/retail-lighting/img-02-render.jpg",
+        "alt": "Retail lighting rendered environment",
+        "title": "Rendered Environment",
+        "caption": "Rendered view illustrating the relationship between ambient, accent, display, and architectural lighting."
+      },
+      {
+        "image": "/assets/projects/retail-lighting/img-03-calc.png",
+        "alt": "Retail lighting photometric calculation results",
+        "title": "Calculation Results",
+        "caption": "Photometric output used to evaluate illuminance distribution and lighting performance."
+      }
+    ],
+
+    "projectNotice": "This project was completed as academic design work and is presented to demonstrate lighting-design methodology, simulation, performance evaluation, and technical communication. It is not presented as a commissioned HaSolantia client project.",
+
     "pdf": "/pdfs/retail-lighting-design.pdf",
+
+    "projectUrl": "/project/?id=retail-lighting",
 
     "featured": true,
     "published": true
   },
 
   {
+    "id": "parking-lot-lighting",
+
     "title": "Sustainable Outdoor Parking Lot Lighting Study",
     "category": "design",
     "type": "Academic Design Study",
@@ -41,6 +154,92 @@
 
     "description2": "The study covered an approximately 660' × 352' parking area and used GLN Galleon II luminaires from Cooper Lighting Solutions. The proposed layout incorporated approximately 60-foot horizontal and 57-foot vertical spacing between poles. A parametric analysis was also completed to evaluate how mounting height influenced average illuminance, maximum illuminance, uniformity, and vertical illuminance.",
 
+    "overview": "The project explored how pole spacing, luminaire distribution, mounting height, and fixture selection influence parking-lot visibility, uniformity, energy performance, and light trespass.",
+
+    "focus": [
+      "Outdoor lighting",
+      "Parking lot illumination",
+      "Uniformity",
+      "Light trespass",
+      "Energy performance"
+    ],
+
+    "tools": [
+      "AGi32",
+      "Manufacturer photometric files"
+    ],
+
+    "scope": [
+      "Site lighting layout",
+      "Photometric simulation",
+      "Pole-height evaluation",
+      "Uniformity analysis",
+      "Light-trespass review",
+      "Standards evaluation"
+    ],
+
+    "deliverables": [
+      "Parking lot lighting layout",
+      "Horizontal illuminance results",
+      "Vertical illuminance results",
+      "Uniformity evaluation",
+      "Pole-height comparison",
+      "Technical report"
+    ],
+
+    "objectives": [
+      {
+        "title": "Visibility and Uniformity",
+        "description": "The design sought to provide appropriate illumination across the parking area while maintaining a balanced distribution and avoiding excessive bright and dark zones."
+      },
+      {
+        "title": "Light Pollution Control",
+        "description": "Luminaire distribution and site-edge performance were evaluated to reduce unnecessary spill light and support light-pollution objectives."
+      }
+    ],
+
+    "strategies": [
+      {
+        "title": "Luminaire Selection",
+        "description": "GLN Galleon II luminaires from Cooper Lighting Solutions were used to support the required site distribution and outdoor-lighting performance."
+      },
+      {
+        "title": "Pole Layout",
+        "description": "The proposed layout used approximately 60-foot horizontal and 57-foot vertical pole spacing across the site."
+      },
+      {
+        "title": "Mounting Height Study",
+        "description": "A parametric comparison was performed to evaluate how changes in pole height affected average illuminance, maximum illuminance, uniformity, and vertical illuminance."
+      }
+    ],
+
+    "performance": [
+      {
+        "title": "Horizontal Illuminance",
+        "description": "Average and maximum horizontal illuminance were evaluated across the parking area."
+      },
+      {
+        "title": "Uniformity",
+        "description": "Lighting distribution was reviewed to evaluate the balance between minimum and average illuminance."
+      },
+      {
+        "title": "Vertical Illuminance",
+        "description": "Vertical illuminance was evaluated to better understand visibility and spill-light conditions around the site."
+      },
+      {
+        "title": "Pole Height",
+        "description": "The analysis showed that increasing mounting height reduced average and maximum illuminance while improving uniformity."
+      },
+      {
+        "title": "Light Trespass",
+        "description": "Site-edge lighting conditions were reviewed in relation to light-pollution and boundary-control criteria."
+      },
+      {
+        "title": "Energy Performance",
+        "description": "Fixture selection and system configuration were considered in relation to overall lighting efficiency."
+      }
+    ],
+
     "highlights": [
       "Software: AGi32",
       "Evaluated sustainability, visibility, uniformity, and light trespass",
@@ -50,13 +249,21 @@
       "Considered LEED and energy-code requirements"
     ],
 
+    "gallery": [],
+
+    "projectNotice": "This project was completed as academic design work and is presented to demonstrate outdoor-lighting design, simulation, performance evaluation, and standards-based analysis. It is not presented as a commissioned HaSolantia client project.",
+
     "pdf": "/pdfs/outdoor-parking-lot-lighting.pdf",
+
+    "projectUrl": "/project/?id=parking-lot-lighting",
 
     "featured": true,
     "published": true
   },
 
   {
+    "id": "office-renovation",
+
     "title": "Office Renovation Lighting Concept",
     "category": "concept",
     "type": "IES Brandston Competition Submission",
@@ -69,6 +276,84 @@
 
     "description2": "The lighting concept explored the relationship between daylight and electric lighting to create smoother transitions throughout the interior environment. Public areas such as lobbies and the multipurpose room used brighter and more uniform ambient lighting to reinforce spaciousness, while corridors and lounge spaces used lower ambient levels and more non-uniform distribution to support a calmer atmosphere. The design incorporated ambient, task, linear, accent, and architectural lighting strategies.",
 
+    "overview": "The project developed a unified architectural-lighting concept for multiple first-floor office spaces while responding to different functional, visual, and experiential requirements.",
+
+    "focus": [
+      "Office lighting",
+      "Architectural identity",
+      "Daylight integration",
+      "Layered lighting",
+      "Spatial experience"
+    ],
+
+    "tools": [
+      "Lighting design software",
+      "CAD documentation",
+      "Rendering and visualization tools"
+    ],
+
+    "scope": [
+      "Lighting concept development",
+      "Space-specific lighting strategies",
+      "Daylight and electric-light integration",
+      "Fixture planning",
+      "Lighting documentation",
+      "Presentation development"
+    ],
+
+    "deliverables": [
+      "Lighting plans",
+      "Rendered views",
+      "Fixture schedules",
+      "Concept imagery",
+      "Design narrative"
+    ],
+
+    "objectives": [
+      {
+        "title": "Cohesive Lighting Identity",
+        "description": "The design aimed to create one consistent lighting language across vestibules, lobbies, corridors, lounge areas, and the multipurpose room."
+      },
+      {
+        "title": "Spatial Experience",
+        "description": "Different lighting intensities and distributions were used to reinforce spaciousness in public zones and create calmer, more intimate conditions in circulation and lounge areas."
+      }
+    ],
+
+    "strategies": [
+      {
+        "title": "Daylight Integration",
+        "description": "The concept explored transitions between available daylight and electric lighting to create a continuous visual experience."
+      },
+      {
+        "title": "Layered Lighting",
+        "description": "Ambient, task, linear, accent, and architectural lighting were combined to address both functional and experiential requirements."
+      },
+      {
+        "title": "Architectural Emphasis",
+        "description": "Lighting was used to reinforce artwork, architectural surfaces, circulation paths, and focal elements within the renovated spaces."
+      }
+    ],
+
+    "performance": [
+      {
+        "title": "Ambient Lighting",
+        "description": "Public spaces such as lobbies and the multipurpose room used brighter and more uniform ambient lighting."
+      },
+      {
+        "title": "Visual Atmosphere",
+        "description": "Corridors and lounge areas used lower ambient levels and more non-uniform distribution to create a calmer atmosphere."
+      },
+      {
+        "title": "Functional Lighting",
+        "description": "Task and circulation requirements were considered alongside the broader architectural concept."
+      },
+      {
+        "title": "Architectural Integration",
+        "description": "Lighting elements were integrated with architectural features and interior surfaces to support a unified design language."
+      }
+    ],
+
     "highlights": [
       "IES Brandston competition submission",
       "Focused on office renovation and architectural lighting identity",
@@ -78,8 +363,13 @@
       "Used layered ambient, task, linear, and accent lighting approaches"
     ],
 
-    "caseStudy": "/portfolio-office-lighting.html",
+    "gallery": [],
+
+    "projectNotice": "This project was developed as an IES Brandston competition submission and is presented as conceptual design work rather than commissioned HaSolantia client work.",
+
     "pdf": "/pdfs/ies-brandston-project.pdf",
+
+    "projectUrl": "/project/?id=office-renovation",
 
     "featured": true,
     "published": true
