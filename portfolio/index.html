@@ -903,37 +903,33 @@
 
 
 
-  // =====================================================
-  // CREATE PROJECT CARD
-  // =====================================================
+ // =====================================================
+// CREATE PROJECT CARD
+// =====================================================
 
-  function createProjectArticle(project) {
+function createProjectArticle(project) {
 
-    const article =
-      document.createElement("article");
+  const article =
+    document.createElement("article");
 
-    article.className =
-      "card portfolio-project";
+  article.className =
+    "card portfolio-project";
 
 
-    const projectMeta = [
-
-      project.type,
-
-      project.date
-
-    ]
+  const projectMeta = [
+    project.type,
+    project.date
+  ]
     .filter(Boolean)
     .join(" · ");
 
 
-    const highlightsHTML =
+  const highlightsHTML =
 
-      Array.isArray(project.highlights) &&
-      project.highlights.length
+    Array.isArray(project.highlights) &&
+    project.highlights.length
 
       ? `
-
         <ul class="list">
 
           ${project.highlights
@@ -944,169 +940,165 @@
             .join("")}
 
         </ul>
-
       `
 
       : "";
 
 
+  // =====================================================
+  // DYNAMIC PROJECT URL
+  // =====================================================
+
+    const projectUrl =
+      project.id
+        ? `/project/?id=${encodeURIComponent(project.id)}`
+        : null;
+  
+  
     const linksHTML =
-
-      project.projectUrl ||
+  
+      projectUrl ||
       project.pdf
-
-      ? `
-
-        <p style="margin-top:0.9rem;">
-
-          ${
-            project.projectUrl
-
-            ? `
-              <a
-                href="${project.projectUrl}"
-                class="inline-link"
-              >
-                View project
-              </a>
-            `
-
-            : ""
-          }
-
-
-          ${
-            project.projectUrl &&
-            project.pdf
-
-            ? "&nbsp;·&nbsp;"
-
-            : ""
-          }
-
-
-          ${
-            project.pdf
-
-            ? `
-              <a
-                href="${project.pdf}"
-                class="inline-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Project PDF
-              </a>
-            `
-
-            : ""
-          }
-
-        </p>
-
-      `
-
-      : "";
-
-
+  
+        ? `
+          <p style="margin-top:0.9rem;">
+  
+            ${
+              projectUrl
+  
+                ? `
+                  <a
+                    href="${projectUrl}"
+                    class="inline-link"
+                  >
+                    View Project
+                  </a>
+                `
+  
+                : ""
+            }
+  
+  
+            ${
+              projectUrl &&
+              project.pdf
+  
+                ? "&nbsp;·&nbsp;"
+  
+                : ""
+            }
+  
+  
+            ${
+              project.pdf
+  
+                ? `
+                  <a
+                    href="${project.pdf}"
+                    class="inline-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Project PDF
+                  </a>
+                `
+  
+                : ""
+            }
+  
+          </p>
+        `
+  
+        : "";
+  
+  
     article.innerHTML = `
-
+  
       ${
         project.image
-
-        ? `
-
-          <img
-            src="${project.image}"
-            alt="${project.alt || project.title}"
-            class="portfolio-image"
-            loading="lazy"
-          />
-
-        `
-
-        : ""
+  
+          ? `
+            <img
+              src="${project.image}"
+              alt="${project.alt || project.title}"
+              class="portfolio-image"
+              loading="lazy"
+            />
+          `
+  
+          : ""
       }
-
-
+  
+  
       <div class="portfolio-content">
-
-
+  
+  
         ${
           projectMeta
-
-          ? `
-
-            <div
-              class="small-note"
-              style="margin-bottom:0.35rem;"
-            >
-              ${projectMeta}
-            </div>
-
-          `
-
-          : ""
+  
+            ? `
+              <div
+                class="small-note"
+                style="margin-bottom:0.35rem;"
+              >
+                ${projectMeta}
+              </div>
+            `
+  
+            : ""
         }
-
-
+  
+  
         <h3 class="card-title">
-
+  
           ${project.title}
-
+  
         </h3>
-
-
+  
+  
         ${
           project.description
-
-          ? `
-
-            <p class="card-text">
-
-              ${project.description}
-
-            </p>
-
-          `
-
-          : ""
+  
+            ? `
+              <p class="card-text">
+  
+                ${project.description}
+  
+              </p>
+            `
+  
+            : ""
         }
-
-
+  
+  
         ${
           project.description2
-
-          ? `
-
-            <p class="card-text">
-
-              ${project.description2}
-
-            </p>
-
-          `
-
-          : ""
+  
+            ? `
+              <p class="card-text">
+  
+                ${project.description2}
+  
+              </p>
+            `
+  
+            : ""
         }
-
-
+  
+  
         ${highlightsHTML}
-
-
+  
         ${linksHTML}
-
-
+  
+  
       </div>
-
+  
     `;
-
-
+  
+  
     return article;
-
+  
   }
-
-
 
   // =====================================================
   // LOAD PROJECTS
