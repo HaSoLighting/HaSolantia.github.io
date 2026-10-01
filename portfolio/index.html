@@ -952,7 +952,7 @@
 
     const linksHTML =
 
-      project.caseStudy ||
+      project.projectUrl ||
       project.pdf
 
       ? `
@@ -960,11 +960,11 @@
         <p style="margin-top:0.9rem;">
 
           ${
-            project.caseStudy
+            project.projectUrl
 
             ? `
               <a
-                href="${project.caseStudy}"
+                href="${project.projectUrl}"
                 class="inline-link"
               >
                 View project
@@ -976,7 +976,7 @@
 
 
           ${
-            project.caseStudy &&
+            project.projectUrl &&
             project.pdf
 
             ? "&nbsp;·&nbsp;"
