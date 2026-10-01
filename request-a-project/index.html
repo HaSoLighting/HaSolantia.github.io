@@ -1,54 +1,801 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
+
   <title>Request a Project – HaSolantia LLC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Request lighting analysis, photometric simulation, research, documentation, or design-support services from HaSolantia." />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="Request architectural lighting analysis, photometric simulation, technical research, design support, or project documentation from HaSolantia LLC."
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="/style.css" />
 </head>
+
+
 <body>
+
 <div class="page">
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
   <header>
+
     <nav class="nav">
-      <div class="nav-left"><a href="/" class="brand-link"><div class="nav-logo-icon"><img src="/assets/images/hasolantia-hs-logo.png" alt="HaSolantia HS logo"></div><div class="nav-brand"><div class="nav-brand-title">HaSolantia</div><div class="nav-brand-sub">Power You Trust.</div></div></a></div>
-      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">☰</button>
-      <div class="nav-links" id="navLinks"><a href="/">Home</a><a href="/services/">Services &amp; Resources</a><a href="/portfolio/">Portfolio</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/request-a-project/" class="nav-cta active">Request a Project</a></div>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <div class="container quote-layout">
-        <div>
-          <div class="section-tagline">Project Inquiry</div>
-          <h1 class="section-title">Tell me what you are working on.</h1>
-          <p class="section-intro">Use this form to request lighting simulation, design support, technical research, documentation, or educational content. Sharing a clear scope helps HaSolantia assess fit, timing, and deliverables.</p>
-          <div class="card quote-expectations">
-            <div class="card-title">What happens next</div>
-            <ol class="list"><li>Your inquiry and available project information are reviewed.</li><li>If the work is a good fit, you receive questions or a written scope.</li><li>Work begins only after scope, deliverables, schedule, and fee are accepted.</li></ol>
+
+      <div class="nav-left">
+
+        <a href="/" class="brand-link">
+
+          <div class="nav-logo-icon">
+            <img
+              src="/assets/images/hasolantia-hs-logo.png"
+              alt="HaSolantia HS logo"
+            >
           </div>
-          <p class="disclaimer"><strong>Professional notice:</strong> HaSolantia provides technical analysis, research, documentation, and design support. It does not prepare, certify, or stamp engineering drawings or provide services requiring an Oregon Professional Engineer license.</p>
-        </div>
-        <form class="card project-form" action="mailto:projects@hasolantia.com" method="post" enctype="text/plain">
-          <div class="card-title">Request a project</div>
-          <label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required />
-          <label for="organization">Company or organization</label><input id="organization" name="organization" type="text" autocomplete="organization" />
-          <label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required />
-          <label for="service">Requested service</label>
-          <select id="service" name="service" required><option value="">Select one</option><option>Lighting simulation and analysis</option><option>Lighting design support</option><option>Research and technical documentation</option><option>Data analysis and visualization</option><option>Educational content or training</option><option>Other related inquiry</option></select>
-          <label for="location">Project location</label><input id="location" name="location" type="text" placeholder="City, state, or remote" />
-          <label for="deadline">Desired completion date</label><input id="deadline" name="deadline" type="date" />
-          <label for="message">Project description</label><textarea id="message" name="message" rows="7" placeholder="Describe the space or problem, requested deliverables, available files, and schedule." required></textarea>
-          <label class="consent-row" for="consent"><input id="consent" name="consent" type="checkbox" required /><span>I understand that submitting this form does not create a client relationship or guarantee acceptance.</span></label>
-          <button type="submit" class="btn-primary">Send Project Inquiry</button>
-          <p class="small-note">Before publishing, connect this form to a secure form service. The current mail link is a temporary fallback.</p>
-        </form>
+
+          <div class="nav-brand">
+
+            <div class="nav-brand-title">
+              HaSolantia LLC
+            </div>
+
+            <div class="nav-brand-sub">
+              Power You Trust.
+            </div>
+
+          </div>
+
+        </a>
+
       </div>
+
+
+      <button
+        class="nav-toggle"
+        aria-label="Toggle navigation"
+        id="navToggle"
+      >
+        ☰
+      </button>
+
+
+      <div
+        class="nav-links"
+        id="navLinks"
+      >
+
+        <a href="/">
+          Home
+        </a>
+
+        <a href="/services/">
+          Services
+        </a>
+
+        <a href="/portfolio/">
+          Projects
+        </a>
+
+        <a href="/about/">
+          About
+        </a>
+
+        <a href="/contact/">
+          Contact
+        </a>
+
+        <a
+          href="/request-a-project/"
+          class="nav-cta active"
+        >
+          Request a Project
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       MAIN
+  ====================================================== -->
+
+  <main>
+
+
+    <section>
+
+      <div class="container quote-layout">
+
+
+        <!-- =================================================
+             INTRODUCTION
+        ================================================== -->
+
+        <div>
+
+
+          <div class="section-tagline">
+            Project Inquiry
+          </div>
+
+
+          <h1 class="section-title">
+            Tell us about your project.
+          </h1>
+
+
+          <p class="section-intro">
+
+            Use this form to request lighting analysis, photometric
+            simulation, architectural lighting support, technical research,
+            data analysis, or project documentation.
+
+            Providing clear project information helps HaSolantia evaluate
+            the requested scope, available resources, schedule, and
+            appropriate deliverables.
+
+          </p>
+
+
+
+          <!-- WHAT HAPPENS NEXT -->
+
+          <div class="card quote-expectations">
+
+            <div class="small-note">
+              Project Process
+            </div>
+
+            <div class="card-title">
+              What Happens Next
+            </div>
+
+
+            <ol class="list">
+
+              <li>
+                The submitted project information and available
+                documentation are reviewed.
+              </li>
+
+              <li>
+                HaSolantia may request additional information or
+                clarification before defining the scope.
+              </li>
+
+              <li>
+                If the project is a suitable fit, a written scope
+                identifies the services, deliverables, assumptions,
+                schedule, and fee.
+              </li>
+
+              <li>
+                Work begins only after the project scope and commercial
+                terms are accepted.
+              </li>
+
+            </ol>
+
+          </div>
+
+
+
+          <!-- INFORMATION TO PREPARE -->
+
+          <div
+            class="card"
+            style="margin-top:1rem;"
+          >
+
+            <div class="small-note">
+              Before You Submit
+            </div>
+
+            <div class="card-title">
+              Helpful Project Information
+            </div>
+
+
+            <p class="card-text">
+
+              The following information can help us assess your
+              project more efficiently.
+
+            </p>
+
+
+            <ul class="list">
+
+              <li>
+                Project type and location
+              </li>
+
+              <li>
+                Current project stage
+              </li>
+
+              <li>
+                Requested service and deliverables
+              </li>
+
+              <li>
+                Available drawings, models, specifications, or IES files
+              </li>
+
+              <li>
+                Applicable criteria or standards
+              </li>
+
+              <li>
+                Desired completion date
+              </li>
+
+            </ul>
+
+          </div>
+
+
+
+          <!-- PROFESSIONAL NOTICE -->
+
+          <p
+            class="disclaimer"
+            style="margin-top:1rem;"
+          >
+
+            <strong>Professional notice:</strong>
+            HaSolantia provides technical analysis, research,
+            documentation, and design-support services.
+            Services requiring professional engineering licensure,
+            certification, or stamped engineering documents must be
+            performed or approved by an appropriately licensed
+            professional.
+
+          </p>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROJECT FORM
+        ================================================== -->
+
+        <form
+          class="card project-form"
+          action="mailto:projects@hasolantia.com"
+          method="post"
+          enctype="text/plain"
+        >
+
+
+          <div class="small-note">
+            Project Request
+          </div>
+
+
+          <div class="card-title">
+            Project Information
+          </div>
+
+
+
+          <!-- NAME -->
+
+          <label for="name">
+            Name
+          </label>
+
+          <input
+            id="name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            required
+          />
+
+
+
+          <!-- ORGANIZATION -->
+
+          <label for="organization">
+            Company or Organization
+          </label>
+
+          <input
+            id="organization"
+            name="organization"
+            type="text"
+            autocomplete="organization"
+          />
+
+
+
+          <!-- EMAIL -->
+
+          <label for="email">
+            Email
+          </label>
+
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+          />
+
+
+
+          <!-- PHONE -->
+
+          <label for="phone">
+            Phone
+          </label>
+
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+          />
+
+
+
+          <!-- SERVICE -->
+
+          <label for="service">
+            Requested Service
+          </label>
+
+          <select
+            id="service"
+            name="service"
+            required
+          >
+
+            <option value="">
+              Select one
+            </option>
+
+            <option value="lighting-analysis">
+              Lighting analysis and photometric simulation
+            </option>
+
+            <option value="lighting-design-support">
+              Architectural lighting design support
+            </option>
+
+            <option value="performance-assessment">
+              Lighting performance assessment
+            </option>
+
+            <option value="research-documentation">
+              Research and technical documentation
+            </option>
+
+            <option value="data-analysis">
+              Technical data analysis
+            </option>
+
+            <option value="custom-support">
+              Project-specific technical support
+            </option>
+
+            <option value="other">
+              Other related service
+            </option>
+
+          </select>
+
+
+
+          <!-- PROJECT TYPE -->
+
+          <label for="project-type">
+            Project Type
+          </label>
+
+          <select
+            id="project-type"
+            name="project_type"
+          >
+
+            <option value="">
+              Select one
+            </option>
+
+            <option value="commercial">
+              Commercial
+            </option>
+
+            <option value="office">
+              Office / Workplace
+            </option>
+
+            <option value="retail">
+              Retail
+            </option>
+
+            <option value="residential">
+              Residential
+            </option>
+
+            <option value="education">
+              Education
+            </option>
+
+            <option value="hospitality">
+              Hospitality
+            </option>
+
+            <option value="exterior">
+              Exterior / Site Lighting
+            </option>
+
+            <option value="research">
+              Research / Technical Study
+            </option>
+
+            <option value="other">
+              Other
+            </option>
+
+          </select>
+
+
+
+          <!-- PROJECT LOCATION -->
+
+          <label for="location">
+            Project Location
+          </label>
+
+          <input
+            id="location"
+            name="location"
+            type="text"
+            placeholder="City, state, or country"
+          />
+
+
+
+          <!-- PROJECT STAGE -->
+
+          <label for="stage">
+            Project Stage
+          </label>
+
+          <select
+            id="stage"
+            name="project_stage"
+          >
+
+            <option value="">
+              Select one
+            </option>
+
+            <option value="concept">
+              Concept / Early Planning
+            </option>
+
+            <option value="schematic">
+              Schematic Design
+            </option>
+
+            <option value="design-development">
+              Design Development
+            </option>
+
+            <option value="construction-documents">
+              Construction Documentation
+            </option>
+
+            <option value="existing-condition">
+              Existing Space / Evaluation
+            </option>
+
+            <option value="research">
+              Research / Technical Study
+            </option>
+
+            <option value="other">
+              Other
+            </option>
+
+          </select>
+
+
+
+          <!-- DELIVERABLES -->
+
+          <label for="deliverables">
+            Requested Deliverables
+          </label>
+
+          <input
+            id="deliverables"
+            name="deliverables"
+            type="text"
+            placeholder="Example: photometric report, lighting layout, fixture schedule"
+          />
+
+
+
+          <!-- DEADLINE -->
+
+          <label for="deadline">
+            Desired Completion Date
+          </label>
+
+          <input
+            id="deadline"
+            name="deadline"
+            type="date"
+          />
+
+
+
+          <!-- BUDGET -->
+
+          <label for="budget">
+            Approximate Project Budget for This Scope
+          </label>
+
+          <select
+            id="budget"
+            name="budget"
+          >
+
+            <option value="">
+              Prefer not to specify
+            </option>
+
+            <option value="under-500">
+              Under $500
+            </option>
+
+            <option value="500-1000">
+              $500–$1,000
+            </option>
+
+            <option value="1000-2500">
+              $1,000–$2,500
+            </option>
+
+            <option value="2500-5000">
+              $2,500–$5,000
+            </option>
+
+            <option value="5000-plus">
+              $5,000+
+            </option>
+
+            <option value="unknown">
+              Not yet determined
+            </option>
+
+          </select>
+
+
+
+          <!-- DESCRIPTION -->
+
+          <label for="message">
+            Project Description
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            rows="8"
+            placeholder="Describe the project, current conditions, requested scope, available files, design objectives, and any important technical requirements."
+            required
+          ></textarea>
+
+
+
+          <!-- FILE NOTE -->
+
+          <p class="small-note">
+
+            If you have drawings, specifications, IES files, images,
+            or other project documents, mention them in the description.
+            File upload capability can be added once the form is connected
+            to a secure web-form service.
+
+          </p>
+
+
+
+          <!-- CONSENT -->
+
+          <label
+            class="consent-row"
+            for="consent"
+          >
+
+            <input
+              id="consent"
+              name="consent"
+              type="checkbox"
+              required
+            />
+
+            <span>
+              I understand that submitting this form does not create
+              a client relationship or guarantee that the project
+              will be accepted.
+            </span>
+
+          </label>
+
+
+
+          <!-- SUBMIT -->
+
+          <button
+            type="submit"
+            class="btn-primary"
+          >
+            Submit Project Request
+          </button>
+
+
+
+          <p
+            class="disclaimer"
+            style="margin-top:0.8rem;"
+          >
+
+            This form currently uses email submission as a temporary
+            fallback. A secure form service should be connected before
+            accepting file uploads or confidential project information.
+
+          </p>
+
+
+        </form>
+
+
+      </div>
+
     </section>
+
+
   </main>
-  <footer><div class="footer-inner"><div class="footer-row"><div>© <span id="year"></span> HaSolantia LLC. All rights reserved.</div><div class="footer-links"><a href="/">Home</a><a href="/services/">Services &amp; Resources</a><a href="/portfolio/">Portfolio</a><a href="/about/">About</a><a href="/contact/">Contact</a></div></div><div class="disclaimer">Services requiring professional licensure must be performed or approved by an appropriately licensed professional.</div></div></footer>
+
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+
+      <div class="footer-row">
+
+
+        <div>
+
+          © <span id="year"></span>
+          HaSolantia LLC. All rights reserved.
+
+        </div>
+
+
+        <div class="footer-links">
+
+          <a href="/">
+            Home
+          </a>
+
+          <a href="/services/">
+            Services
+          </a>
+
+          <a href="/portfolio/">
+            Projects
+          </a>
+
+          <a href="/about/">
+            About
+          </a>
+
+          <a href="/contact/">
+            Contact
+          </a>
+
+          <a href="/request-a-project/">
+            Request a Project
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="disclaimer">
+
+        HaSolantia provides technical analysis, research,
+        documentation, and design support. Services requiring
+        professional licensure must be performed or approved
+        by an appropriately licensed professional.
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
 </div>
-<script>const navToggle=document.getElementById("navToggle");const navLinks=document.getElementById("navLinks");if(navToggle&&navLinks)navToggle.addEventListener("click",()=>navLinks.classList.toggle("open"));const yearSpan=document.getElementById("year");if(yearSpan)yearSpan.textContent=new Date().getFullYear();</script>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+  const navToggle =
+    document.getElementById("navToggle");
+
+  const navLinks =
+    document.getElementById("navLinks");
+
+
+  if (navToggle && navLinks) {
+
+    navToggle.addEventListener(
+      "click",
+      () => navLinks.classList.toggle("open")
+    );
+
+  }
+
+
+  const yearSpan =
+    document.getElementById("year");
+
+
+  if (yearSpan) {
+
+    yearSpan.textContent =
+      new Date().getFullYear();
+
+  }
+
+</script>
+
+
 </body>
 </html>
