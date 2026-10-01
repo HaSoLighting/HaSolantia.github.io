@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <title>Project – HaSolantia LLC</title>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="HaSolantia project case study."
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    rel="stylesheet"
+    href="/style.css"
+  />
+</head>
+
+
+<body>
+
+<div class="page">
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header>
+
+    <nav class="nav">
+
+      <div class="nav-left">
+
+        <a
+          href="/"
+          class="brand-link"
+        >
+
+          <div class="nav-logo-icon">
+
+            <img
+              src="/assets/images/hasolantia-hs-logo.png"
+              alt="HaSolantia HS logo"
+            >
+
+          </div>
+
+
+          <div class="nav-brand">
+
+            <div class="nav-brand-title">
+              HaSolantia LLC
+            </div>
+
+            <div class="nav-brand-sub">
+              Power You Trust.
+            </div>
+
+          </div>
+
+        </a>
+
+      </div>
+
+
+      <button
+        class="nav-toggle"
+        aria-label="Toggle navigation"
+        id="navToggle"
+      >
+        ☰
+      </button>
+
+
+      <div
+        class="nav-links"
+        id="navLinks"
+      >
+
+        <a href="/">
+          Home
+        </a>
+
+        <a href="/services/">
+          Services
+        </a>
+
+        <a
+          href="/portfolio/"
+          class="active"
+        >
+          Projects
+        </a>
+
+        <a href="/about/">
+          About
+        </a>
+
+        <a href="/contact/">
+          Contact
+        </a>
+
+        <a
+          href="/request-a-project/"
+          class="nav-cta"
+        >
+          Request a Project
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       MAIN
+  ====================================================== -->
+
+  <main id="project-main">
+
+
+    <!-- ===================================================
+         LOADING STATE
+    ==================================================== -->
+
+    <section>
+
+      <div class="container">
+
+        <div
+          id="project-loading"
+          class="card"
+        >
+
+          <div class="card-title">
+            Loading Project
+          </div>
+
+          <p class="card-text">
+            Project information is being loaded.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+
+      <div class="footer-row">
+
+        <div>
+          © <span id="year"></span>
+          HaSolantia LLC. All rights reserved.
+        </div>
+
+
+        <div class="footer-links">
+
+          <a href="/">
+            Home
+          </a>
+
+          <a href="/services/">
+            Services
+          </a>
+
+          <a href="/portfolio/">
+            Projects
+          </a>
+
+          <a href="/about/">
+            About
+          </a>
+
+          <a href="/contact/">
+            Contact
+          </a>
+
+          <a href="/request-a-project/">
+            Request a Project
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="disclaimer">
+
+        HaSolantia provides technical analysis, research,
+        documentation, and design support. Services requiring
+        professional licensure must be performed or approved by an
+        appropriately licensed professional.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+  // =====================================================
+  // MOBILE NAVIGATION
+  // =====================================================
+
+  const navToggle =
+    document.getElementById("navToggle");
+
+  const navLinks =
+    document.getElementById("navLinks");
+
+
+  if (navToggle && navLinks) {
+
+    navToggle.addEventListener(
+      "click",
+      () => navLinks.classList.toggle("open")
+    );
+
+  }
+
+
+
+  // =====================================================
+  // COPYRIGHT YEAR
+  // =====================================================
+
+  const yearSpan =
+    document.getElementById("year");
+
+
+  if (yearSpan) {
+
+    yearSpan.textContent =
+      new Date().getFullYear();
+
+  }
+
+
+
+  // =====================================================
+  // HELPERS
+  // =====================================================
+
+  function escapeHTML(value) {
+
+    return String(value ?? "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+
+  }
+
+
+  function renderStringList(items) {
+
+    if (
+      !Array.isArray(items) ||
+      items.length === 0
+    ) {
+
+      return "";
+
+    }
+
+
+    return `
+
+      <ul class="list">
+
+        ${items
+          .map(
+            item =>
+              `<li>${escapeHTML(item)}</li>`
+          )
+          .join("")}
+
+      </ul>
+
+    `;
+
+  }
+
+
+  function renderDetailCards(items) {
+
+    if (
+      !Array.isArray(items) ||
+      items.length === 0
+    ) {
+
+      return "";
+
+    }
+
+
+    return `
+
+      <div class="grid-3">
+
+        ${items
+          .map(
+            item => `
+
+              <article class="card">
+
+                <div class="card-title">
+                  ${escapeHTML(item.title)}
+                </div>
+
+                <p class="card-text">
+                  ${escapeHTML(item.description)}
+                </p>
+
+              </article>
+
+            `
+          )
+          .join("")}
+
+      </div>
+
+    `;
+
+  }
+
+
+  function renderGallery(gallery) {
+
+    if (
+      !Array.isArray(gallery) ||
+      gallery.length === 0
+    ) {
+
+      return "";
+
+    }
+
+
+    return `
+
+      <section>
+
+        <div class="container">
+
+          <div class="section-tagline">
+            Project Gallery
+          </div>
+
+          <h2 class="section-title">
+            Design and technical documentation
+          </h2>
+
+          <p class="section-intro">
+            Selected images illustrating the design process,
+            project development, and technical evaluation.
+          </p>
+
+
+          <div class="grid-3">
+
+            ${gallery
+              .map(
+                item => `
+
+                  <article class="card">
+
+                    ${
+                      item.title
+                      ? `
+                        <div class="card-title">
+                          ${escapeHTML(item.title)}
+                        </div>
+                      `
+                      : ""
+                    }
+
+                    <img
+                      src="${escapeHTML(item.image)}"
+                      alt="${escapeHTML(item.alt || item.title || "Project image")}"
+                      loading="lazy"
+                      style="
+                        width:100%;
+                        border-radius:10px;
+                        margin-top:0.7rem;
+                      "
+                    >
+
+                    ${
+                      item.caption
+                      ? `
+                        <p
+                          class="card-text"
+                          style="margin-top:0.8rem;"
+                        >
+                          ${escapeHTML(item.caption)}
+                        </p>
+                      `
+                      : ""
+                    }
+
+                  </article>
+
+                `
+              )
+              .join("")}
+
+          </div>
+
+        </div>
+
+      </section>
+
+    `;
+
+  }
+
+
+
+  // =====================================================
+  // GET PROJECT ID
+  // =====================================================
+
+  const urlParams =
+    new URLSearchParams(
+      window.location.search
+    );
+
+
+  const projectId =
+    urlParams.get("id");
+
+
+
+  // =====================================================
+  // LOAD PROJECT DATA
+  // =====================================================
+
+  const projectMain =
+    document.getElementById("project-main");
+
+
+  fetch("/data/projects.json")
+
+    .then(response => {
+
+      if (!response.ok) {
+
+        throw new Error(
+          "Could not load projects.json"
+        );
+
+      }
+
+      return response.json();
+
+    })
+
+
+    .then(projects => {
+
+
+      const project =
+        projects.find(
+          item =>
+            item.id === projectId &&
+            item.published !== false
+        );
+
+
+      if (!project) {
+
+        throw new Error(
+          "Project not found"
+        );
+
+      }
+
+
+
+      // =========================================
+      // UPDATE PAGE TITLE / META DESCRIPTION
+      // =========================================
+
+      document.title =
+        `${project.title} – HaSolantia LLC`;
+
+
+      const metaDescription =
+        document.querySelector(
+          'meta[name="description"]'
+        );
+
+
+      if (metaDescription) {
+
+        metaDescription.setAttribute(
+          "content",
+          project.description ||
+          project.overview ||
+          "HaSolantia project case study."
+        );
+
+      }
+
+
+
+      // =========================================
+      // PROJECT SNAPSHOT
+      // =========================================
+
+      const snapshotItems = [];
+
+
+      if (project.type) {
+
+        snapshotItems.push(
+          `<li><strong>Project type:</strong> ${escapeHTML(project.type)}</li>`
+        );
+
+      }
+
+
+      if (project.date) {
+
+        snapshotItems.push(
+          `<li><strong>Date:</strong> ${escapeHTML(project.date)}</li>`
+        );
+
+      }
+
+
+      if (
+        Array.isArray(project.focus) &&
+        project.focus.length > 0
+      ) {
+
+        snapshotItems.push(
+          `<li><strong>Focus:</strong> ${escapeHTML(project.focus.join(", "))}</li>`
+        );
+
+      }
+
+
+      if (
+        Array.isArray(project.tools) &&
+        project.tools.length > 0
+      ) {
+
+        snapshotItems.push(
+          `<li><strong>Tools:</strong> ${escapeHTML(project.tools.join(", "))}</li>`
+        );
+
+      }
+
+
+      if (
+        Array.isArray(project.scope) &&
+        project.scope.length > 0
+      ) {
+
+        snapshotItems.push(
+          `<li><strong>Scope:</strong> ${escapeHTML(project.scope.join(", "))}</li>`
+        );
+
+      }
+
+
+      if (
+        Array.isArray(project.deliverables) &&
+        project.deliverables.length > 0
+      ) {
+
+        snapshotItems.push(
+          `<li><strong>Deliverables:</strong> ${escapeHTML(project.deliverables.join(", "))}</li>`
+        );
+
+      }
+
+
+
+      // =========================================
+      // BUILD FULL PAGE
+      // =========================================
+
+      projectMain.innerHTML = `
+
+
+        <!-- =====================================
+             HERO / INTRO
+        ====================================== -->
+
+        <section>
+
+          <div class="container">
+
+
+            <div class="section-tagline">
+
+              ${escapeHTML(
+                project.type ||
+                "Project"
+              )}
+
+            </div>
+
+
+            <h1 class="section-title">
+
+              ${escapeHTML(
+                project.title
+              )}
+
+            </h1>
+
+
+            ${
+              project.description
+              ? `
+                <p class="section-intro">
+                  ${escapeHTML(project.description)}
+                </p>
+              `
+              : ""
+            }
+
+
+            <div class="card">
+
+
+              <div class="small-note">
+                Project Overview
+              </div>
+
+
+              <div class="card-title">
+                Project Snapshot
+              </div>
+
+
+              <ul class="list">
+
+                ${snapshotItems.join("")}
+
+              </ul>
+
+
+              ${
+                project.pdf
+                ? `
+
+                  <hr class="soft">
+
+                  <p class="card-text">
+
+                    <a
+                      class="inline-link"
+                      href="${escapeHTML(project.pdf)}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Project Report
+                    </a>
+
+                  </p>
+
+                `
+                : ""
+              }
+
+
+            </div>
+
+
+          </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             PROJECT OVERVIEW
+        ====================================== -->
+
+        ${
+          project.overview ||
+          project.description2
+
+          ? `
+
+            <section class="professional-profile">
+
+              <div class="container">
+
+
+                <div class="section-tagline">
+                  Project Overview
+                </div>
+
+
+                <h2 class="section-title">
+                  Design and technical context
+                </h2>
+
+
+                ${
+                  project.overview
+                  ? `
+                    <p class="section-intro">
+                      ${escapeHTML(project.overview)}
+                    </p>
+                  `
+                  : ""
+                }
+
+
+                ${
+                  project.description2
+                  ? `
+                    <p
+                      class="section-intro"
+                      style="margin-top:-0.7rem;"
+                    >
+                      ${escapeHTML(project.description2)}
+                    </p>
+                  `
+                  : ""
+                }
+
+
+              </div>
+
+            </section>
+
+          `
+
+          : ""
+        }
+
+
+
+        <!-- =====================================
+             OBJECTIVES
+        ====================================== -->
+
+        ${
+          Array.isArray(project.objectives) &&
+          project.objectives.length > 0
+
+          ? `
+
+            <section>
+
+              <div class="container">
+
+
+                <div class="section-tagline">
+                  Project Objectives
+                </div>
+
+
+                <h2 class="section-title">
+                  Design objectives
+                </h2>
+
+
+                ${renderDetailCards(
+                  project.objectives
+                )}
+
+
+              </div>
+
+            </section>
+
+          `
+
+          : ""
+        }
+
+
+
+        <!-- =====================================
+             STRATEGIES
+        ====================================== -->
+
+        ${
+          Array.isArray(project.strategies) &&
+          project.strategies.length > 0
+
+          ? `
+
+            <section class="professional-profile">
+
+              <div class="container">
+
+
+                <div class="section-tagline">
+                  Design Strategy
+                </div>
+
+
+                <h2 class="section-title">
+                  Approach and development
+                </h2>
+
+
+                ${renderDetailCards(
+                  project.strategies
+                )}
+
+
+              </div>
+
+            </section>
+
+          `
+
+          : ""
+        }
+
+
+
+        <!-- =====================================
+             PERFORMANCE
+        ====================================== -->
+
+        ${
+          Array.isArray(project.performance) &&
+          project.performance.length > 0
+
+          ? `
+
+            <section>
+
+              <div class="container">
+
+
+                <div class="section-tagline">
+                  Technical Evaluation
+                </div>
+
+
+                <h2 class="section-title">
+                  Performance considerations
+                </h2>
+
+
+                ${renderDetailCards(
+                  project.performance
+                )}
+
+
+              </div>
+
+            </section>
+
+          `
+
+          : ""
+        }
+
+
+
+        <!-- =====================================
+             HIGHLIGHTS
+        ====================================== -->
+
+        ${
+          Array.isArray(project.highlights) &&
+          project.highlights.length > 0
+
+          ? `
+
+            <section class="professional-profile">
+
+              <div class="container">
+
+
+                <div class="section-tagline">
+                  Project Highlights
+                </div>
+
+
+                <h2 class="section-title">
+                  Key project elements
+                </h2>
+
+
+                <div
+                  class="card"
+                  style="max-width:900px;"
+                >
+
+                  ${renderStringList(
+                    project.highlights
+                  )}
+
+                </div>
+
+
+              </div>
+
+            </section>
+
+          `
+
+          : ""
+        }
+
+
+
+        <!-- =====================================
+             GALLERY
+        ====================================== -->
+
+        ${renderGallery(
+          project.gallery
+        )}
+
+
+
+        <!-- =====================================
+             PROJECT CONTEXT
+        ====================================== -->
+
+        ${
+          project.projectNotice
+
+          ? `
+
+            <section class="professional-profile">
+
+              <div class="container">
+
+
+                <div
+                  class="card"
+                  style="max-width:900px;"
+                >
+
+                  <div class="small-note">
+                    Project Context
+                  </div>
+
+
+                  <div class="card-title">
+                    ${escapeHTML(
+                      project.type ||
+                      "Project"
+                    )}
+                  </div>
+
+
+                  <p class="card-text">
+
+                    ${escapeHTML(
+                      project.projectNotice
+                    )}
+
+                  </p>
+
+
+                </div>
+
+
+
+                <div class="section-actions">
+
+
+                  <a
+                    href="/portfolio/"
+                    class="btn-secondary"
+                  >
+                    View All Projects
+                  </a>
+
+
+                  <a
+                    href="/request-a-project/"
+                    class="btn-primary"
+                  >
+                    Discuss a Similar Project
+                  </a>
+
+
+                </div>
+
+
+              </div>
+
+            </section>
+
+          `
+
+          : ""
+        }
+
+
+      `;
+
+
+    })
+
+
+    .catch(error => {
+
+
+      console.error(
+        "Project loading error:",
+        error
+      );
+
+
+      projectMain.innerHTML = `
+
+        <section>
+
+          <div class="container">
+
+
+            <div class="section-tagline">
+              Projects
+            </div>
+
+
+            <h1 class="section-title">
+              Project Not Found
+            </h1>
+
+
+            <p class="section-intro">
+
+              The requested project could not be found
+              or is not currently published.
+
+            </p>
+
+
+            <div class="section-actions">
+
+              <a
+                href="/portfolio/"
+                class="btn-primary"
+              >
+                View Projects
+              </a>
+
+              <a
+                href="/contact/"
+                class="btn-secondary"
+              >
+                Contact HaSolantia
+              </a>
+
+            </div>
+
+
+          </div>
+
+        </section>
+
+      `;
+
+
+    });
+
+</script>
+
+
+</body>
+</html>
