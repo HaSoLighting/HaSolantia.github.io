@@ -132,8 +132,7 @@
     "projectNotice": "This project was completed as academic design work and is presented to demonstrate lighting-design methodology, simulation, performance evaluation, and technical communication. It is not presented as a commissioned HaSolantia client project.",
 
     "pdf": "/pdfs/retail-lighting-design.pdf",
-
-    "projectUrl": "/project/?id=retail-lighting",
+    
 
     "featured": true,
     "published": true
@@ -255,7 +254,6 @@
 
     "pdf": "/pdfs/outdoor-parking-lot-lighting.pdf",
 
-    "projectUrl": "/project/?id=parking-lot-lighting",
 
     "featured": true,
     "published": true
@@ -369,7 +367,6 @@
 
     "pdf": "/pdfs/ies-brandston-project.pdf",
 
-    "projectUrl": "/project/?id=office-renovation",
 
     "featured": true,
     "published": true
