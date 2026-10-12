@@ -1,0 +1,14 @@
+HaSolantia SEO update — 12 October 2026
+
+Upload the contents of this package into the root of HaSoLighting/HaSolantia.github.io, retaining the same folder paths. Replace matching files, commit to the branch used by GitHub Pages, and wait for the Pages deployment to finish. Existing styles, images, scripts and project data remain in your repository; this package contains only changed or new files.
+
+Changes: Corvallis-focused homepage title and heading; linked local service page; replacement of outdated lighting-design placeholder; canonical URLs on main pages; organization JSON-LD; sitemap.xml and robots.txt; corrected info@hasolantia.com mail link.
+
+After deployment:
+1. Open https://hasolantia.com/lighting-design-corvallis/, /lighting-design/, /sitemap.xml and /robots.txt. Check navigation on phone and desktop.
+2. Verify hasolantia.com in Google Search Console (https://search.google.com/search-console). Submit sitemap.xml and inspect the homepage and new local page; request indexing if appropriate.
+3. If you meet customers in person or visit their locations, create or complete a Google Business Profile at https://www.google.com/business/. Use your actual business name and truthful service areas. Hide a home address when customers are not received there. Online-only businesses are ineligible.
+4. Ask genuine clients for honest reviews and pursue relevant local links from real collaborators or directories.
+5. Track impressions, clicks and inquiries for lighting design Corvallis, lighting design Oregon, and photometric analysis. Results take time; indexing and first-place rankings are not guaranteed.
+
+Validation: principal edited pages and new page checked for one H1, one canonical URL, and local link targets; schema JSON and sitemap XML parsed; git diff whitespace check passed. No browser layout verification or live deployment performed. Dynamic portfolio rendering was retained; search visibility of that content should be checked in Search Console. No invented reviews, client projects, street address, or credentials were added.
