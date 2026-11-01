@@ -908,42 +908,57 @@
 // CREATE PROJECT CARD
 // =====================================================
 
-function createProjectArticle(project) {
+ffunction createFeaturedProjectCard(project) {
+  const article = document.createElement("article");
+  article.className = "hs-work-card";
 
-  const article =
-    document.createElement("article");
+  const url =
+    `/project/?id=${encodeURIComponent(project.id)}`;
 
-  article.className =
-    "card portfolio-project";
+  const title = project.cardTitle || project.title;
+  const summary = project.summary || project.description || "";
 
-
-  const projectMeta = [
-    project.type,
-    project.date
-  ]
+  const metadata = [project.type, project.date]
     .filter(Boolean)
+    .map(escapeHTML)
     .join(" · ");
 
+  article.innerHTML = `
+    ${
+      project.image
+        ? `
+          <a class="hs-work-image-link" href="${url}">
+            <img
+              class="hs-work-image"
+              src="${escapeHTML(project.image)}"
+              alt="${escapeHTML(project.alt || title)}"
+              loading="lazy"
+              decoding="async"
+            >
+          </a>
+        `
+        : ""
+    }
 
-  const highlightsHTML =
+    <div class="hs-work-body">
+      <p class="hs-work-meta">${metadata}</p>
 
-    Array.isArray(project.highlights) &&
-    project.highlights.length
+      <h3 class="hs-work-title">
+        <a href="${url}">${escapeHTML(title)}</a>
+      </h3>
 
-      ? `
-        <ul class="list">
+      <p class="hs-work-summary">
+        ${escapeHTML(summary)}
+      </p>
 
-          ${project.highlights
-            .map(
-              item =>
-                `<li>${item}</li>`
-            )
-            .join("")}
+      <a class="inline-link" href="${url}">
+        Explore project <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  `;
 
-        </ul>
-      `
-
-      : "";
+  return article;
+}
 
 
   // =====================================================
