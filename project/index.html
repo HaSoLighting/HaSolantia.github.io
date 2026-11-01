@@ -623,99 +623,197 @@
       // =========================================
       // BUILD FULL PAGE
       // =========================================
-
-      projectMain.innerHTML = `
-
-
-        <!-- =====================================
-             HERO / INTRO
-        ====================================== -->
-
-        <section>
-
-          <div class="container">
-
-
-            <div class="section-tagline">
-
-              ${escapeHTML(
-                project.type ||
-                "Project"
-              )}
-
-            </div>
-
-
-            <h1 class="section-title">
-
-              ${escapeHTML(
-                project.title
-              )}
-
-            </h1>
-
-
-            ${
-              project.description
-              ? `
-                <p class="section-intro">
-                  ${escapeHTML(project.description)}
+        projectMain.innerHTML = `
+          <section class="hs-case-study">
+            <div class="container">
+        
+              <a class="inline-link" href="/portfolio/">
+                ← All projects
+              </a>
+        
+              <header class="hs-case-heading">
+                <p class="hs-work-meta">
+                  ${escapeHTML(project.type || "Project")}
+                  ${
+                    project.date
+                      ? ` · ${escapeHTML(project.date)}`
+                      : ""
+                  }
                 </p>
-              `
-              : ""
-            }
-
-
-            <div class="card">
-
-
-              <div class="small-note">
-                Project Overview
-              </div>
-
-
-              <div class="card-title">
-                Project Snapshot
-              </div>
-
-
-              <ul class="list">
-
-                ${snapshotItems.join("")}
-
-              </ul>
-
-
+        
+                <h1 class="hs-case-title">
+                  ${escapeHTML(project.cardTitle || project.title)}
+                </h1>
+        
+                <p class="hs-case-intro">
+                  ${escapeHTML(
+                    project.summary ||
+                    project.description ||
+                    ""
+                  )}
+                </p>
+              </header>
+        
               ${
-                project.pdf
-                ? `
-
-                  <hr class="soft">
-
-                  <p class="card-text">
-
-                    <a
-                      class="inline-link"
-                      href="${escapeHTML(project.pdf)}"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      View Project Report
-                    </a>
-
-                  </p>
-
-                `
-                : ""
+                project.image
+                  ? `
+                    <figure class="hs-case-hero">
+                      <img
+                        src="${escapeHTML(project.image)}"
+                        alt="${escapeHTML(
+                          project.alt || project.title
+                        )}"
+                        decoding="async"
+                      >
+                      <figcaption>Design simulation</figcaption>
+                    </figure>
+                  `
+                  : ""
               }
-
-
+        
+              <dl class="hs-case-facts">
+                <div>
+                  <dt>Project context</dt>
+                  <dd>${escapeHTML(project.type || "Design study")}</dd>
+                </div>
+        
+                <div>
+                  <dt>Role</dt>
+                  <dd>${escapeHTML(
+                    project.role || "Design and technical analysis"
+                  )}</dd>
+                </div>
+        
+                <div>
+                  <dt>Tools</dt>
+                  <dd>${escapeHTML(
+                    (project.tools || []).join(", ") || "Not specified"
+                  )}</dd>
+                </div>
+        
+                <div>
+                  <dt>Date</dt>
+                  <dd>${escapeHTML(project.date || "Not specified")}</dd>
+                </div>
+              </dl>
+        
+              <div class="hs-case-story">
+                <section>
+                  <h2>The challenge</h2>
+                  <p>${escapeHTML(
+                    project.challenge || project.overview || ""
+                  )}</p>
+                </section>
+        
+                <section>
+                  <h2>The design response</h2>
+                  <p>${escapeHTML(
+                    project.response || project.description2 || ""
+                  )}</p>
+                </section>
+              </div>
+        
+              ${
+                Array.isArray(project.gallery) &&
+                project.gallery.length
+                  ? `
+                    <section class="hs-case-gallery-section">
+                      <h2>Selected project visuals</h2>
+        
+                      <div class="hs-case-gallery">
+                        ${project.gallery
+                          .filter(item => item.image)
+                          .map(item => `
+                            <figure>
+                              <img
+                                src="${escapeHTML(item.image)}"
+                                alt="${escapeHTML(
+                                  item.alt ||
+                                  item.title ||
+                                  "Project visual"
+                                )}"
+                                loading="lazy"
+                                decoding="async"
+                              >
+        
+                              <figcaption>
+                                ${
+                                  item.title
+                                    ? `<strong>${escapeHTML(item.title)}</strong>`
+                                    : ""
+                                }
+                                ${
+                                  item.caption
+                                    ? `<span>${escapeHTML(item.caption)}</span>`
+                                    : ""
+                                }
+                              </figcaption>
+                            </figure>
+                          `)
+                          .join("")}
+                      </div>
+                    </section>
+                  `
+                  : ""
+              }
+        
+              <div class="hs-case-story">
+                <section>
+                  <h2>Key findings</h2>
+                  <p>${escapeHTML(project.findings || project.overview || "")}</p>
+                </section>
+        
+                <section>
+                  <h2>Deliverables</h2>
+                  <ul class="hs-case-deliverables">
+                    ${(project.deliverables || [])
+                      .map(item => `<li>${escapeHTML(item)}</li>`)
+                      .join("")}
+                  </ul>
+                </section>
+              </div>
+        
+              <section class="hs-case-documentation">
+                <h2>Project documentation</h2>
+        
+                ${
+                  project.projectNotice
+                    ? `<p>${escapeHTML(project.projectNotice)}</p>`
+                    : ""
+                }
+        
+                ${
+                  project.pdf
+                    ? `
+                      <a
+                        class="inline-link"
+                        href="${escapeHTML(project.pdf)}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Open technical report (PDF) ↗
+                      </a>
+                    `
+                    : ""
+                }
+              </section>
+        
+              <section class="hs-case-cta">
+                <div>
+                  <h2>Planning a similar project?</h2>
+                  <p>
+                    Share your space, drawings, and lighting goals.
+                  </p>
+                </div>
+        
+                <a class="btn-primary" href="/request-a-project/">
+                  Discuss your project
+                </a>
+              </section>
+        
             </div>
-
-
-          </div>
-
-        </section>
+          </section>
+        `;
 
 
 
