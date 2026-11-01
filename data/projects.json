@@ -2,13 +2,20 @@
   {
     "id": "retail-lighting",
 
+    "cardTitle": "One Store. Two Lighting Experiences.",
+    "summary": "Two lighting concepts explore how the same retail space can feel open and spacious or intimate and focused on merchandise.",
+    "role": "Lighting concept, simulation, and documentation",
+    "challenge": "Create two distinct lighting experiences within the same store while considering merchandise displays, circulation, and counter tasks.",
+    "response": "Compare uniform ambient and peripheral lighting with a lower ambient scene that uses focused accent lighting to emphasize merchandise.",
+    "findings": "The simulations illustrate how lighting distribution changes the appearance of the same space. Several illuminance targets were not met, identifying opportunities for further design development.",
+
     "title": "Retail Lighting Design Study",
     "category": "design",
     "type": "Academic Design Study",
     "date": "June 2024",
 
     "image": "/images/retail-lighting-cover.png",
-    "alt": "Retail lighting design study cover",
+    "alt": "Retail lighting design simulation",
 
     "description": "A retail lighting design study developed to explore how lighting composition can influence the perception of spaciousness and closure within a sales environment. The project applied John Flynn’s psychological lighting principles while addressing visual performance, customer experience, energy use, glare control, and the needs of retail personnel.",
 
@@ -131,7 +138,6 @@
 
     "projectNotice": "This project was completed as academic design work and is presented to demonstrate lighting-design methodology, simulation, performance evaluation, and technical communication. It is not presented as a commissioned HaSolantia client project.",
 
-    "pdf": "/pdfs/retail-lighting-design.pdf",
     
 
     "featured": true,
@@ -141,13 +147,20 @@
   {
     "id": "parking-lot-lighting",
 
+    "cardTitle": "Parking Lot Lighting: Visibility and Boundary Control",
+    "summary": "A parking lot lighting study exploring how pole height affects illumination, uniformity, and light at the site boundary.",
+    "role": "Lighting layout, photometric simulation, and comparative analysis",
+    "challenge": "Balance lighting distribution across a large parking area with control of illumination beyond the site.",
+    "response": "Model a regular pole layout and compare six mounting heights using horizontal and vertical illuminance calculations.",
+    "findings": "The comparison identifies tradeoffs between mounting height, lighting distribution, and boundary illuminance. Energy and compliance figures in the original report require verification before being presented as confirmed results.",
+
     "title": "Sustainable Outdoor Parking Lot Lighting Study",
     "category": "design",
     "type": "Academic Design Study",
     "date": "October 2024",
 
     "image": "/images/parking-lot-cover.png",
-    "alt": "Sustainable outdoor parking lot lighting study cover",
+    "alt": "Parking lot lighting simulation",
 
     "description": "An outdoor lighting design study focused on developing a sustainable parking-lot lighting system that balances visibility, uniformity, energy performance, and light-pollution control. The project evaluated the lighting design against IES RP-8-22, LEED light-pollution criteria, ANSI/ASHRAE/IES 90.1, and IDA/IES Model Lighting Ordinance guidance.",
 
@@ -252,8 +265,6 @@
 
     "projectNotice": "This project was completed as academic design work and is presented to demonstrate outdoor-lighting design, simulation, performance evaluation, and standards-based analysis. It is not presented as a commissioned HaSolantia client project.",
 
-    "pdf": "/pdfs/outdoor-parking-lot-lighting.pdf",
-
 
     "featured": true,
     "published": true
@@ -262,13 +273,20 @@
   {
     "id": "office-renovation",
 
+    "cardTitle": "A Cohesive Lighting Identity for the Workplace",
+    "summary": "A layered lighting concept connects lobbies, corridors, a lounge, and shared spaces within an office renovation proposal.",
+    "role": "Lighting concept, fixture planning, and presentation",
+    "challenge": "Develop a consistent lighting identity across first-floor office spaces with different functions, materials, and daylight conditions.",
+    "response": "Combine ambient, task, and accent lighting with space-specific lighting distributions and a coordinated controls concept.",
+    "findings": "The submission communicates the proposed lighting approach through layouts, rendered views, fixture schedules, and a design narrative. It represents a competition proposal rather than an installed project.",
+
     "title": "Office Renovation Lighting Concept",
     "category": "concept",
     "type": "IES Brandston Competition Submission",
     "date": "May 2025",
 
     "image": "/images/brandston-cover.png",
-    "alt": "Office renovation architectural lighting concept cover",
+    "alt": "Office lobby lighting simulation",
 
     "description": "A competition lighting concept developed for the renovation of the first floor of a five-story office building in Sydney. The project addressed vestibules, general and executive lobbies, corridors, a lounge, and a multipurpose room while developing a cohesive lighting identity across spaces with different functional and experiential requirements.",
 
@@ -364,8 +382,6 @@
     "gallery": [],
 
     "projectNotice": "This project was developed as an IES Brandston competition submission and is presented as conceptual design work rather than commissioned HaSolantia client work.",
-
-    "pdf": "/pdfs/ies-brandston-project.pdf",
 
 
     "featured": true,
